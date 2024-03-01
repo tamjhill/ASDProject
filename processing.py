@@ -52,9 +52,7 @@ def get_urls(dlist):
     for d in range(len(dlist)):
         prefix = 'https://doi.org/'
         new_url = prefix + dlist[d]
-        #new_url = prefix.replace("%3A", ":")
         url_list.append(new_url)
-    # testurl = url_list[2]
     return url_list
 
 
@@ -82,7 +80,6 @@ def get_tables(url):
 
 def get_pdfs(url):
     art_output_dir = 'article_data'
-
     u = urlopen(url)
     try:
         html = u.read().decode('utf-8')
@@ -125,10 +122,7 @@ def main():
     print("All articles and data retrived")
     return 
 
-
 #add a function to be used to pull only new data
 
 if __name__ == "__main__":
     main()
-
-#test article - https://doi.org/10.1038/s41586-023-06473-y
