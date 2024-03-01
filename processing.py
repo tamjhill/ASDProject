@@ -14,24 +14,11 @@ import textract
 # retrieve articles and convert to DOIs (which will then be converted to urls)
 # Article search, returning PMIDs for articles with search terms taken from related article titles.
 
-
-#from_url from module 'pdfkit' 
-
-"""
-url = "https://doi.org/10.1038/s41586-023-06473-y"
-my_dir = "data" 
-my_file = "testfile1.pdf"
-new_file = os.path.join(my_dir, my_file)
-response = requests.get(url)
-with open('testfile1.pdf', 'wb') as f:
-    f.write(response.content)
-    print("file created")"""
-
 def get_search_result():
     Entrez.email = "thill09@student.bbk.ac.uk"
     handle = Entrez.esearch(db='pubmed',
                             term='(autism[title] AND brain AND transcriptomic AND expression AND rna)',
-                            retmax='500',
+                            retmax='5',
                             retmode='xml')
     search_results = Entrez.read(handle)
     return search_results
@@ -44,8 +31,7 @@ def get_pmids(search_res):
     return initial_list
 
 # for each PMID, convert to DOI and add to new list
-
-#NB - instead make this a dictionary to retain original PMID
+#NB - instead make this a dictionary to retain original PMID?
 def get_dois(plist):
     doi_list = []
     for i in plist:
@@ -68,13 +54,16 @@ def get_urls(dlist):
         new_url = prefix + dlist[d]
         #new_url = prefix.replace("%3A", ":")
         url_list.append(new_url)
-    testurl = url_list[2]
-    return testurl
+    # testurl = url_list[2]
+    return url_list
 
 
 # retrieve supplementary files from the article
 def get_tables(url):
     supp_output_dir = 'supp_data'
+    new_dir = url.rsplit('/', 1)[-1]
+    new_path = os.path.join(supp_output_dir, new_dir)
+    os.mkdir(new_path)
     u = urlopen(url)
     try:
         html = u.read().decode('utf-8')
@@ -85,7 +74,7 @@ def get_tables(url):
         href = link.get('href')
         if not any(href.endswith(x) for x in ['.csv', '.xls', '.xlsx']):
             continue
-        filename = os.path.join(supp_output_dir, href.rsplit('/', 1)[-1])
+        filename = os.path.join(new_path, href.rsplit('/', 1)[-1])
         print("Downloading %s to %s..." % (href, filename))
         urlretrieve(href, filename)
         print("Done.")
@@ -93,9 +82,13 @@ def get_tables(url):
 
 def get_pdfs(url):
     art_output_dir = 'article_data'
+
     u = urlopen(url)
     try:
         html = u.read().decode('utf-8')
+    except urllib.error.HTTPError as e:
+        if e.code in (..., 403, ...):
+            pass
     finally:
         u.close()
     soup = BeautifulSoup(html, "html.parser")
@@ -103,33 +96,39 @@ def get_pdfs(url):
     if pdf_meta_tag:
             # Extract the PDF URL from the content attribute of the meta tag
             pdf_url = pdf_meta_tag.get('content')
+            if not pdf_url.endswith('.pdf'):
+                pdf_url += '.pdf'
             print(pdf_url)
             filename = os.path.join(art_output_dir, pdf_url.rsplit('/', 1)[-1])
-            response = requests.get(pdf_url)
+            try:
+                response = requests.get(pdf_url)
+            except requests.exceptions.RequestException as e: 
+                print(e, "error. URL not accessible.")
+                pass
             with open(filename, 'wb') as fw:
                 fw.write(response.content)
             return
-    print(f"Error: Unable to fetch content from {url}")
     return None
 
 
 def main():
-    #search_data = get_search_result()
-    #supp_data = get_tables('https://doi.org/10.1038/s41586-023-06473-y')
-    get_pdfs('https://doi.org/10.1038/s41586-023-06473-y')
-    #pmid_data = get_pmids(search_data)
-    #doi_data = get_dois(art_data)
-    #url_data = get_urls(doi_data)
-    #find_data(url_data)
-    #get_pdf_url('https://doi.org/10.1038/s41586-023-06473-y')
+    search_data = get_search_result()
+    pmid_data = get_pmids(search_data)
+    doi_data = get_dois(pmid_data)
+    url_data = get_urls(doi_data)
+    for u in url_data:
+        try:
+            get_pdfs(u)
+            get_tables(u)
+        except urllib.error.HTTPError:
+            pass
+    print("All articles and data retrived")
     return 
 
+
+#add a function to be used to pull only new data
 
 if __name__ == "__main__":
     main()
 
-#https://doi.org/10.1038/s41586-023-06473-y
-
-# t_url = 'https://doi.org/10.1016/j.molcel.2016.11.033'
-#t2_url = 'https://doi.org/10.1038/s41586-023-06473-y'
-#find_data(t2_url)-
+#test article - https://doi.org/10.1038/s41586-023-06473-y
