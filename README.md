@@ -2,12 +2,13 @@ Overall plan for the code:
 
 1. finding relevant articles
 
-    - Completed in processing.py, return a list of urls
+    - Completed in processing.py
 
 
 2. retrieving pdf of article, or article summary
 
-    - nougat? See https://arxiv.org/abs/2308.13418
+    - Completed in processing.py, returns all retrievable articles in pdf format with the doi as its name
+        nougat? See https://arxiv.org/abs/2308.13418
     - 
 
 
