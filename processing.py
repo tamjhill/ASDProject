@@ -1,3 +1,5 @@
+#This file searches rthe Entrez database for relevant papers, retreives their DOIs and obtains a pdf 
+# of the original paper, as well as all supporting data xlsx files
 
 # importing libraries
 from Bio import Entrez
@@ -18,7 +20,7 @@ def get_search_result():
     Entrez.email = "thill09@student.bbk.ac.uk"
     handle = Entrez.esearch(db='pubmed',
                             term='(autism[title] AND brain AND transcriptomic AND expression AND rna)',
-                            retmax='5',
+                            retmax='10',
                             retmode='xml')
     search_results = Entrez.read(handle)
     return search_results
@@ -58,9 +60,10 @@ def get_urls(dlist):
 
 # retrieve supplementary files from the article
 def get_tables(url):
+    main_dir = 'data'
     supp_output_dir = 'supp_data'
     new_dir = url.rsplit('/', 1)[-1]
-    new_path = os.path.join(supp_output_dir, new_dir)
+    new_path = os.path.join(main_dir, supp_output_dir, new_dir)
     os.mkdir(new_path)
     u = urlopen(url)
     try:
@@ -79,6 +82,7 @@ def get_tables(url):
     return
 
 def get_pdfs(url):
+    main_dir = 'data'
     art_output_dir = 'article_data'
     u = urlopen(url)
     try:
@@ -96,7 +100,7 @@ def get_pdfs(url):
             if not pdf_url.endswith('.pdf'):
                 pdf_url += '.pdf'
             print(pdf_url)
-            filename = os.path.join(art_output_dir, pdf_url.rsplit('/', 1)[-1])
+            filename = os.path.join(main_dir, art_output_dir, pdf_url.rsplit('/', 1)[-1])
             try:
                 response = requests.get(pdf_url)
             except requests.exceptions.RequestException as e: 

@@ -1,10 +1,10 @@
-import os
-from pypdf import PdfReader
-import openpyxl
-from sentence_transformers import SentenceTransformer
-import faiss
+#This file uses the data folder containing all retrived pdfs and xlsx files to 
+# create a vector database using FAISS, while saving the metadata for each
+# paper in a pkl file to aid future re-retrieval
 
-# Initialize the sentence transformer model (to generate embeddings)
+
+"""creating vector database for all info to create searchable resource"""
+# Initialise the sentence transformer model (to generate embeddings)
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Initialize the FAISS index (to create the vector database)
@@ -19,15 +19,20 @@ for root, dirs, files in os.walk(data_dir):
         file_path = os.path.join(root, filename)
         
         if filename.endswith('.pdf'):
-            # Process PDF files
-            reader = PdfReader(file_path)
-            text = ''
-            for page in reader.pages:
-                text += page.extract_text()
-            embedding = model.encode([text])
-            index.add(embedding)
-            index_ids.append(len(index_ids))
-            index_metadata.append({'file': filename, 'type': 'pdf', 'directory': root})
+            try:
+                # Process PDF files
+                pdf_doc = fitz.open(file_path)
+                text = ''
+                for page in pdf_doc:
+                    text += page.get_text()
+                embedding = model.encode([text])
+                index.add(embedding)
+                index_ids.append(len(index_ids))
+                index_metadata.append({'file': filename, 'type': 'pdf', 'directory': root})
+                #for now, will skip 'corrupted' pdf files (in future, need to ensure all have EOF marker at end)
+            except fitz.FileDataError:
+                print(f"Error processing PDF file: {file_path}")
+                continue
             
         elif filename.endswith('.xlsx'):
             # Process Excel files
@@ -58,3 +63,5 @@ faiss.write_index(index, 'index.faiss')
 import pickle
 with open('metadata.pkl', 'wb') as f:
     pickle.dump(index_metadata, f)
+
+
