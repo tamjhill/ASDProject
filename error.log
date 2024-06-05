@@ -1,0 +1,476 @@
+2024-05-17 17:11:40,148 - ERROR: <urlopen error unknown url type: c>
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 17:11:40,184 - ERROR: Could not parse C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\supp_data/mappingDataset1.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 17:14:23,612 - ERROR: <urlopen error unknown url type: c>
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 17:14:23,623 - ERROR: Could not parse C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\supp_data/mappingDataset1.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:10:33,185 - ERROR: <urlopen error unknown url type: c>
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\rdfizer_dir\SDM-RDFizer\rdfizer\rdfizer\semantify.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:10:33,197 - ERROR: Could not parse C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\supp_data/mappingDataset1.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\rdfizer_dir\SDM-RDFizer\rdfizer\rdfizer\semantify.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:16:38,311 - ERROR: <urlopen error unknown url type: c>
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:16:38,323 - ERROR: Could not parse C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\supp_data/mappingDataset1.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:18:35,211 - ERROR: <urlopen error unknown url type: c>
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:18:35,223 - ERROR: Could not parse C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\supp_data/mappingDataset1.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:30:20,290 - ERROR: <urlopen error unknown url type: c>
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-17 18:30:20,302 - ERROR: Could not parse C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\supp_data/mappingDataset1.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 463, in _create_input_source_from_location
+    input_source = URLInputSource(absolute_location, format)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 270, in __init__
+    response: addinfourl = _urlopen(req)
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\_networking.py", line 106, in _urlopen
+    return urlopen(request)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 539, in _open
+    return self._call_chain(self.handle_open, 'unknown',
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\tamjh\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1417, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: c>
+2024-05-21 11:35:54,622 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:35:54,670 - ERROR: Could not parse /data/mapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:36:33,276 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:36:33,284 - ERROR: Could not parse /data/mapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:37:59,526 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:37:59,536 - ERROR: Could not parse /data\mapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:44:35,671 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:44:35,678 - ERROR: Could not parse /data/mapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:57:31,463 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:57:31,469 - ERROR: Could not parse /data/mapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:58:05,552 - ERROR: [Errno 2] No such file or directory: '\\datamapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\datamapping.ttl'
+2024-05-21 11:58:05,559 - ERROR: Could not parse /datamapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\datamapping.ttl'
+2024-05-21 11:58:25,816 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 11:58:25,824 - ERROR: Could not parse /data/mapping.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping.ttl'
+2024-05-21 12:00:15,036 - ERROR: [Errno 2] No such file or directory: '\\data\\mapping_test.ttl'
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping_test.ttl'
+2024-05-21 12:00:15,043 - ERROR: Could not parse /data/mapping_test.ttl as a mapping file. Aborting...
+Traceback (most recent call last):
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdfizer\__init__.py", line 1354, in mapping_parser
+    mapping_graph.parse(mapping_file, format='n3')
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\graph.py", line 1468, in parse
+    source = create_input_source(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 401, in create_input_source
+    ) = _create_input_source_from_location(
+  File "C:\Users\tamjh\CodeProjects\ASDProject\.venv\lib\site-packages\rdflib\parser.py", line 461, in _create_input_source_from_location
+    file = open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '\\data\\mapping_test.ttl'

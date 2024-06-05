@@ -11,7 +11,10 @@ import requests
 from urllib.request import urlopen, urlretrieve
 # import shutil
 import urllib.request, urllib.error, urllib.parse
-import textract
+# import textract
+import pandas as pd
+from functools import reduce
+from metapub import PubMedFetcher
 
 # retrieve articles and convert to DOIs (which will then be converted to urls)
 # Article search, returning PMIDs for articles with search terms taken from related article titles.
@@ -64,7 +67,8 @@ def get_tables(url):
     supp_output_dir = 'supp_data'
     new_dir = url.rsplit('/', 1)[-1]
     new_path = os.path.join(main_dir, supp_output_dir, new_dir)
-    os.mkdir(new_path)
+    # Create the directory if it doesn't exist
+    os.makedirs(new_path, exist_ok=True)
     u = urlopen(url)
     try:
         html = u.read().decode('utf-8')
@@ -76,9 +80,12 @@ def get_tables(url):
         if not any(href.endswith(x) for x in ['.csv', '.xls', '.xlsx']):
             continue
         filename = os.path.join(new_path, href.rsplit('/', 1)[-1])
-        print("Downloading %s to %s..." % (href, filename))
-        urlretrieve(href, filename)
-        print("Done.")
+        if os.path.isfile(filename):
+            print(f"File '{filename}' already exists. Skipping file creation.")
+        else:
+            print("Downloading %s to %s..." % (href, filename))
+            urlretrieve(href, filename)
+            print("Done.")
     return
 
 def get_pdfs(url):
@@ -106,16 +113,65 @@ def get_pdfs(url):
             except requests.exceptions.RequestException as e: 
                 print(e, "error. URL not accessible.")
                 pass
-            with open(filename, 'wb') as fw:
-                fw.write(response.content)
+            if os.path.isfile(filename):
+                print(f"File '{filename}' already exists. Skipping file creation.")
+            else:
+                with open(filename, 'wb') as fw:
+                    fw.write(response.content)
             return
     return None
+
+def get_metadata(plist, dlist):
+    fetch = PubMedFetcher()
+    articles = {}
+    for pmid in plist:
+        articles[pmid] = fetch.article_by_pmid(pmid)
+
+    # Extract relevant information and create DataFrames
+    titles = {}
+    for pmid in plist:
+        titles[pmid] = fetch.article_by_pmid(pmid).title
+    Title = pd.DataFrame(list(titles.items()), columns=['pmid', 'title'])
+
+#    authors = {}
+#    for pmid in plist:
+#        authors[pmid] = fetch.article_by_pmid(pmid).author_name
+#    Author = pd.DataFrame(list(authors.items()), columns=['pmid', 'author_name'])
+
+    dates = {}
+    for pmid in plist:
+        dates[pmid] = fetch.article_by_pmid(pmid).year
+    Date = pd.DataFrame(list(dates.items()), columns=['pmid', 'year'])
+
+    journals = {}
+    for pmid in plist:
+        journals[pmid] = fetch.article_by_pmid(pmid).journal 
+    Journal = pd.DataFrame(list(journals.items()), columns=['pmid', 'journal'])
+
+    Doi = pd.DataFrame({'pmid': plist, 'doi': dlist})
+
+    # Merge all DataFrames into a single one
+    data_frames = [Title, Date, Journal, Doi]
+    df_merged = reduce(lambda  left, right: pd.merge(left, right, on=['pmid'], how='outer'), data_frames)
+
+    # Export the merged DataFrame to a CSV file
+    main_dir = 'data'
+    file_path = os.path.join(main_dir, 'asd_article_metadata.csv')
+    if os.path.isfile(file_path):
+        print(f"File '{file_path}' already exists. Overwriting it.")
+        df_merged.to_csv(file_path, index=False)
+    else:
+        df_merged.to_csv(file_path, index=False)
+        print(f"File '{file_path}' created.")
+    return None
+
 
 
 def main():
     search_data = get_search_result()
     pmid_data = get_pmids(search_data)
     doi_data = get_dois(pmid_data)
+    get_metadata(pmid_data, doi_data)
     url_data = get_urls(doi_data)
     for u in url_data:
         try:
