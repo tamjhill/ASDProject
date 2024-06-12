@@ -23,15 +23,6 @@ prefixes:
   EDAM-DATA: 'http://edamontology.org/data_'
   EDAM-FORMAT: 'http://edamontology.org/format_'
 
-column_mappings:
-  'Ensemble ID': ensemble_id
-  'EnsembleID': ensemble_id
-  'ensembleid': ensemble_id
-  'ensemble id': ensemble_id
-  'Ensemble_ID': ensemble_id
-  'ensemble_id': ensemble_id
-#ENS[A-Z]*[FPTG][0-9]{11}
-
 mappings:
   articles:
     sources:

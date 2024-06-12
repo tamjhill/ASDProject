@@ -1,0 +1,37 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX biolink: <https://w3id.org/biolink/vocab/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#PREFIX doi: <https://doi.org/>
+#PREFIX ogg: <http://purl.obolibrary.org/obo/ogg.owl>
+PREFIX datacite: <http://purl.org/spar/datacite>
+PREFIX edam: <http://edamontology.org/>
+PREFIX dc-doi: <http://purl.org/spar/datacite/PrimaryResourceIdentifier>
+PREFIX dc-has-id: <http://purl.org/spar/datacite/hasIdentifier>
+PREFIX dc-has-authors: <http://purl.org/spar/datacite/hasCreatorList>
+PREFIX dc-journal: <http://purl.org/spar/datacite/OrganizationIdentifierScheme>
+PREFIX dc-title: <http://purl.org/dc/elements/1.1/title>
+PREFIX dc-date: <http://purl.org/dc/elements/1.1/date>
+PREFIX co-authors: <http://purl.org/co/List>
+PREFIX dc-id: <http://purl.org/spar/datacite/>
+#PREFIX ensemble-id: <http://edamontology.org/data_2610>
+PREFIX has-output: <http://edamontology.org/has_output>
+PREFIX alt-id: <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId>
+PREFIX NCBIGene: <http://edamontology.org/data_1027>
+#PREFIX UniProtKB: <http://purl.uniprot.org/uniprot/>
+#PREFIX PMC: <http://europepmc.org/articles/PMC>
+#PREFIX EDAM-DATA: <http://edamontology.org/data_>
+#PREFIX EDAM-FORMAT: <http://edamontology.org/format_>
+
+CONSTRUCT { 
+   ?Article_iri a biolink:Article ;
+      biolink:pmid ?pmid ;
+      dc-title: ?title ;
+      dc-journal: ?journal ;
+      dc-date: ?y ;
+      dc-doi: ?doi
+}
+#FROM <file:data\asd_article_metadata.csv>
+WHERE { 
+  BIND (UUID() AS ?Article_iri)
+  BIND (xsd:integer(?year) AS ?y)
+}

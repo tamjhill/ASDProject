@@ -6350,6 +6350,89 @@ classes:
       - CHEBI
       - MAXO
 
+   ## ------
+   ## THINGS
+   ## ------
+
+  entity:
+    description: >-
+      Root Biolink Model class for all things and informational relationships, real or imagined.
+    abstract: true
+    slots:
+      - id
+      - iri
+      - category
+      - type    # rdf:type
+      - name
+      - description
+      - has attribute
+      - deprecated
+       # evidence code(s)?
+
+  named thing:
+    is_a: entity
+    description: "a databased entity or concept/class"
+    slots:
+      - provided by
+      - xref
+      - full name
+      - synonym
+    slot_usage:
+      category:
+        required: true
+    exact_mappings:
+      - BFO:0000001
+      - WIKIDATA:Q35120
+       # UMLS Semantic Group "Objects"
+      - UMLSSG:OBJC
+       # Entity
+      - STY:T071
+      - dcid:Thing
+
+  relationship type:
+    is_a: ontology class
+    description: >-
+      An OWL property used as an edge label
+
+  taxonomic rank:
+    description: >-
+      A descriptor for the rank within a taxonomic classification.
+      Example instance: TAXRANK:0000017 (kingdom)
+    is_a: ontology class
+    id_prefixes:
+      - TAXRANK
+    mappings:
+      - WIKIDATA:Q427626
+
+  organism taxon:
+    aliases: ['taxon', 'taxonomic classification']
+    description: >-
+      A classification of a set of organisms. Example instances:
+      NCBITaxon:9606 (Homo sapiens), NCBITaxon:2 (Bacteria).
+      Can also be used to represent strains or subspecies.
+    is_a: named thing
+    slots:
+      - has taxonomic rank
+    slot_usage:
+      has taxonomic rank:
+        range: taxonomic rank
+        multivalued: false
+        mappings:
+          - WIKIDATA:P105
+    values_from:
+      - NCBITaxon
+    exact_mappings:
+      - WIKIDATA:Q16521
+      - STY:T001
+      - bioschemas:Taxon
+    narrow_mappings:
+      - dcid:BiologicalSpecies
+    id_prefixes:
+      - NCBITaxon
+      - MESH
+      - UMLS
+    in_subset:
+      - model_organism_database
 
    ## Temporal Entities
 

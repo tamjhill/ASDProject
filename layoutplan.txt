@@ -1,0 +1,61 @@
+tsv nodes file:
+
+
+id	category	name	provided_by
+
+
+or 
+
+id  name    category    provided_by xref    type    in_taxon
+UniProtKB:P84085    ARF5    biolink:Protein STRING  ENSEMBL:ENSP00000000233     NCBITaxon:9606
+
+
+tsv edges file:
+
+
+
+or
+
+id  subject predicate   object    provided_by category
+985eb9e6-e0bf-4cef-be0a-3d8ea12d228b    NCBIGene:381    biolink:interacts_with  NCBIGene:805    STRING  biolink:GeneToGeneAssociation
+
+
+
+my file1 columns:
+pmid,title,year,journal,doi
+PMID36406395,Effect of stigma maydis polysaccharide on...,2022,Front Microbiol,10.3389/fmicb.2022.1009502
+
+my file2 columns:
+cell_type,ensemble_id,entrez_id,Symbol,LogFC relative to other subtypes,Change relative to other subtypes,Fdr relative to other subtypes,LogFC relative to controls,Change relative to controls,Fdr relative to controls,SFARI gene,doi,pmid
+AST-FB,ENSG00000087250,NCBIGene4504,MT3,0.202767039,up-regulated ,0.000615011,0.775549263,up-regulated ,4.33E-05,No,s12859-023-05278-0,PMID37041460
+
+
+
+wanted nodes:
+id [ gene ensembl num(file2)]	name [Symbol(file2)]	provided_by [PMID(FILE2)	change (literal)
+
+wanted edges:
+subject		predicate	object
+id [ gene ensembl num(file2)]	biolink:mentioned_by		PMID
+
+
+
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+:ArticlePMID1 a :Article ;
+  :name "" ;
+  :journal "" ;
+  :mentions "" [ensebml1];
+  :mentions "" ;
+  :mentions "" ;
+  :mentions "" ;
+  :mentions "" ;
+  :published "" ; 
+  :doi
+
+:[ensembke1] a :Gene ;
+ :alt if "" ;
+ :output ""^^xsd:str (eg up-reg) 

@@ -1,0 +1,27 @@
+name: asd-kg
+
+prefixes:
+ biolink: https://w3id.org/biolink/vocab/
+
+mappings:
+  articles:
+    sources:
+      - ['asd_article_metadata.csv~csv']
+    s: biolink\/Article:$(pmid)
+    po:
+      - [a, biolink\/Article]
+      - p: biolink\/mentions
+        o:
+          - mapping: genes
+            condition:
+              function: equal
+              parameters:
+                - [str1, $(pmid), o]
+                - [str2, $(ensemble_id), s]
+  genes:
+    sources:
+      - ['dataset_test1.csv~csv']
+    s: biolink\/Gene:$ensemble_id
+    po:
+      - [biolink\/mentioned_by, biolink\/Article:$pmid]
+
