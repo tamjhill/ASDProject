@@ -23,8 +23,8 @@ PREFIX NCBIGene: <http://edamontology.org/data_1027>
 #PREFIX EDAM-FORMAT: <http://edamontology.org/format_>
 
 CONSTRUCT { 
-   ?Article_iri a biolink:Article ;
-      biolink:pmid ?pmid ;
+   ?URI a biolink:pmid ;
+      a biolink:Article ;
       dc-title: ?title ;
       dc-journal: ?journal ;
       dc-date: ?y ;
@@ -32,6 +32,18 @@ CONSTRUCT {
 }
 #FROM <file:data\asd_article_metadata.csv>
 WHERE { 
-  BIND (UUID() AS ?Article_iri)
-  BIND (xsd:integer(?year) AS ?y)
+   BIND (URI(CONCAT('https://pubmed.ncbi.nlm.nih.gov/', ?pmid)) AS ?URI)
+   BIND (xsd:integer(?year) AS ?y)
+}
+
+CONSTRUCT { 
+   ?URIGene a biolink:Gene ;
+      a  ?ensemble_id ;
+      alt-id: ?entrez_id ;
+      alt-id: ?Symbol ;
+      has-output: ?Change_relative_to_controls
+}
+#FROM <file:data\dataset_test1.csv>
+WHERE { 
+   BIND (URI(CONCAT('https://www.ensembl.org/Multi/Search/Results?q=', ?ensemble_id)) AS ?URIGene)
 }

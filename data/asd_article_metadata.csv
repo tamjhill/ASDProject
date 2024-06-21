@@ -1,11 +1,21 @@
 pmid,title,year,journal,doi
-PMID36406395,Effect of stigma maydis polysaccharide on the gut microbiota and transcriptome of VPA induced autism model rats.,2022,Front Microbiol,10.3389/fmicb.2022.1009502
-PMID36590292,Common targetable inflammatory pathways in brain transcriptome of autism spectrum disorders and Tourette syndrome.,2022,Front Neurosci,10.3389/fnins.2022.999346
-PMID36761165,Novel insights into the immune cell landscape and gene signatures in autism spectrum disorder by bioinformatics and clinical analysis.,2022,Front Immunol,10.3389/fimmu.2022.1082950
-PMID37041460,Single-nucleus gene and gene set expression-based similarity network fusion identifies autism molecular subtypes.,2023,BMC Bioinformatics,10.1186/s12859-023-05278-0
-PMID37381037,Exploratory analysis of L1 retrotransposons expression in autism﻿.,2023,Mol Autism,10.1186/s13229-023-00554-5
-PMID37704762,Single-cell brain organoid screening identifies developmental defects in autism.,2023,Nature,10.1038/s41586-023-06473-y
-PMID37807181,Dissection of cellular disruptions in autism spectrum disorder comorbidities.,2023,Eur J Neurosci,10.1111/ejn.16155
-PMID38260618,Rapid effects of valproic acid on the fetal brain transcriptome: Implications for brain development and autism.,2024,Res Sq,10.21203/rs.3.rs-3684653/v1
-PMID38594551,Exploring key genes and pathways associated with sex differences in autism spectrum disorder: integrated bioinformatic analysis.,2024,Mamm Genome,10.1007/s00335-024-10036-5
-PMID38750585,"Sex-specific impacts of prenatal bisphenol A exposure on genes associated with cortical development, social behaviors, and autism in the offspring's prefrontal cortex.",2024,Biol Sex Differ,10.1186/s13293-024-00614-2
+33716665,Identification of Natural Antisense Transcripts in Mouse Brain and Their Association With Autism Spectrum Disorder Risk Genes.,2021,Front Mol Neurosci,10.3389/fnmol.2021.624881
+33806835,Single-Cell Transcriptomics Supports a Role of CHD8 in Autism.,2021,Int J Mol Sci,10.3390/ijms22063261
+34946850,Gene Regulation Analysis Reveals Perturbations of Autism Spectrum Disorder during Neural System Development.,2021,Genes (Basel),10.3390/genes12121901
+34947998,Autism-Related Transcription Factors Underlying the Sex-Specific Effects of Prenatal Bisphenol A Exposure on Transcriptome-Interactome Profiles in the Offspring Prefrontal Cortex.,2021,Int J Mol Sci,10.3390/ijms222413201
+35301122,Deficiency of autism-related Scn2a gene in mice disrupts sleep patterns and circadian rhythms.,2022,Neurobiol Dis,10.1016/j.nbd.2022.105690
+35710789,SFARI genes and where to find them; modelling Autism Spectrum Disorder specific gene expression dysregulation with RNA-seq data.,2022,Sci Rep,10.1038/s41598-022-14077-1
+35962193,Trans-genetic effects of circular RNA expression quantitative trait loci and potential causal mechanisms in autism.,2022,Mol Psychiatry,10.1038/s41380-022-01714-4
+36213201,Cell-type specific transcriptomic signatures of neocortical circuit organization and their relevance to autism.,2022,Front Neural Circuits,10.3389/fncir.2022.982721
+36323788,Broad transcriptomic dysregulation occurs across the cerebral cortex in ASD.,2022,Nature,10.1038/s41586-022-05377-7
+36376022,A meta-analysis of differentially expressed and regulatory genes with their functional enrichment analysis for brain transcriptome data in autism spectrum disorder.,2023,J Biomol Struct Dyn,10.1080/07391102.2022.2143900
+36406395,Effect of stigma maydis polysaccharide on the gut microbiota and transcriptome of VPA induced autism model rats.,2022,Front Microbiol,10.3389/fmicb.2022.1009502
+36590292,Common targetable inflammatory pathways in brain transcriptome of autism spectrum disorders and Tourette syndrome.,2022,Front Neurosci,10.3389/fnins.2022.999346
+36688057,The Issue of Monocyte Activation in ASD: Troubles with Translation.,2022,J Cell Immunol,10.33696/immunology.4.146
+37041460,Single-nucleus gene and gene set expression-based similarity network fusion identifies autism molecular subtypes.,2023,BMC Bioinformatics,10.1186/s12859-023-05278-0
+37381037,Exploratory analysis of L1 retrotransposons expression in autism﻿.,2023,Mol Autism,10.1186/s13229-023-00554-5
+37704762,Single-cell brain organoid screening identifies developmental defects in autism.,2023,Nature,10.1038/s41586-023-06473-y
+37807181,Dissection of cellular disruptions in autism spectrum disorder comorbidities.,2023,Eur J Neurosci,10.1111/ejn.16155
+38594551,Exploring key genes and pathways associated with sex differences in autism spectrum disorder: integrated bioinformatic analysis.,2024,Mamm Genome,10.1007/s00335-024-10036-5
+38750585,"Sex-specific impacts of prenatal bisphenol A exposure on genes associated with cortical development, social behaviors, and autism in the offspring's prefrontal cortex.",2024,Biol Sex Differ,10.1186/s13293-024-00614-2
+38781372,Molecular cascades and cell type-specific signatures in ASD revealed by single-cell genomics.,2024,Science,10.1126/science.adh2602

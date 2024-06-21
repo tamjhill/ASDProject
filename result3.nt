@@ -1,0 +1,60 @@
+<https://pubmed.ncbi.nlm.nih.gov/36406395> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/36406395> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/36406395> <http://purl.org/dc/elements/1.1/title> "Effect of stigma maydis polysaccharide on the gut microbiota and transcriptome of VPA induced autism model rats." .
+<https://pubmed.ncbi.nlm.nih.gov/36406395> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Front Microbiol" .
+<https://pubmed.ncbi.nlm.nih.gov/36406395> <http://purl.org/dc/elements/1.1/date> "2022"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/36406395> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.3389/fmicb.2022.1009502" .
+<https://pubmed.ncbi.nlm.nih.gov/36590292> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/36590292> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/36590292> <http://purl.org/dc/elements/1.1/title> "Common targetable inflammatory pathways in brain transcriptome of autism spectrum disorders and Tourette syndrome." .
+<https://pubmed.ncbi.nlm.nih.gov/36590292> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Front Neurosci" .
+<https://pubmed.ncbi.nlm.nih.gov/36590292> <http://purl.org/dc/elements/1.1/date> "2022"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/36590292> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.3389/fnins.2022.999346" .
+<https://pubmed.ncbi.nlm.nih.gov/36761165> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/36761165> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/36761165> <http://purl.org/dc/elements/1.1/title> "Novel insights into the immune cell landscape and gene signatures in autism spectrum disorder by bioinformatics and clinical analysis." .
+<https://pubmed.ncbi.nlm.nih.gov/36761165> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Front Immunol" .
+<https://pubmed.ncbi.nlm.nih.gov/36761165> <http://purl.org/dc/elements/1.1/date> "2022"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/36761165> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.3389/fimmu.2022.1082950" .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://purl.org/dc/elements/1.1/title> "Single-nucleus gene and gene set expression-based similarity network fusion identifies autism molecular subtypes." .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "BMC Bioinformatics" .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://purl.org/dc/elements/1.1/date> "2023"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.1186/s12859-023-05278-0" .
+<https://pubmed.ncbi.nlm.nih.gov/37381037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/37381037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/37381037> <http://purl.org/dc/elements/1.1/title> "Exploratory analysis of L1 retrotransposons expression in autism∩╗┐." .
+<https://pubmed.ncbi.nlm.nih.gov/37381037> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Mol Autism" .
+<https://pubmed.ncbi.nlm.nih.gov/37381037> <http://purl.org/dc/elements/1.1/date> "2023"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/37381037> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.1186/s13229-023-00554-5" .
+<https://pubmed.ncbi.nlm.nih.gov/37704762> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/37704762> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/37704762> <http://purl.org/dc/elements/1.1/title> "Single-cell brain organoid screening identifies developmental defects in autism." .
+<https://pubmed.ncbi.nlm.nih.gov/37704762> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Nature" .
+<https://pubmed.ncbi.nlm.nih.gov/37704762> <http://purl.org/dc/elements/1.1/date> "2023"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/37704762> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.1038/s41586-023-06473-y" .
+<https://pubmed.ncbi.nlm.nih.gov/37807181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/37807181> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/37807181> <http://purl.org/dc/elements/1.1/title> "Dissection of cellular disruptions in autism spectrum disorder comorbidities." .
+<https://pubmed.ncbi.nlm.nih.gov/37807181> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Eur J Neurosci" .
+<https://pubmed.ncbi.nlm.nih.gov/37807181> <http://purl.org/dc/elements/1.1/date> "2023"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/37807181> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.1111/ejn.16155" .
+<https://pubmed.ncbi.nlm.nih.gov/38260618> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/38260618> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/38260618> <http://purl.org/dc/elements/1.1/title> "Rapid effects of valproic acid on the fetal brain transcriptome: Implications for brain development and autism." .
+<https://pubmed.ncbi.nlm.nih.gov/38260618> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Res Sq" .
+<https://pubmed.ncbi.nlm.nih.gov/38260618> <http://purl.org/dc/elements/1.1/date> "2024"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/38260618> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.21203/rs.3.rs-3684653/v1" .
+<https://pubmed.ncbi.nlm.nih.gov/38594551> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/38594551> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/38594551> <http://purl.org/dc/elements/1.1/title> "Exploring key genes and pathways associated with sex differences in autism spectrum disorder: integrated bioinformatic analysis." .
+<https://pubmed.ncbi.nlm.nih.gov/38594551> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Mamm Genome" .
+<https://pubmed.ncbi.nlm.nih.gov/38594551> <http://purl.org/dc/elements/1.1/date> "2024"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/38594551> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.1007/s00335-024-10036-5" .
+<https://pubmed.ncbi.nlm.nih.gov/38750585> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/pmid> .
+<https://pubmed.ncbi.nlm.nih.gov/38750585> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/biolink/vocab/Article> .
+<https://pubmed.ncbi.nlm.nih.gov/38750585> <http://purl.org/dc/elements/1.1/title> "Sex-specific impacts of prenatal bisphenol A exposure on genes associated with cortical development, social behaviors, and autism in the offspring's prefrontal cortex." .
+<https://pubmed.ncbi.nlm.nih.gov/38750585> <http://purl.org/spar/datacite/OrganizationIdentifierScheme> "Biol Sex Differ" .
+<https://pubmed.ncbi.nlm.nih.gov/38750585> <http://purl.org/dc/elements/1.1/date> "2024"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://pubmed.ncbi.nlm.nih.gov/38750585> <http://purl.org/spar/datacite/PrimaryResourceIdentifier> "10.1186/s13293-024-00614-2" .

@@ -1,0 +1,51 @@
+name: asd-kg
+
+prefixes: 
+  doi: https://doi.org/
+  ogg: http://purl.obolibrary.org/obo/ogg.owl 
+  datacite: http://purl.org/spar/datacite
+  edam: http://edamontology.org/
+  dc-doi: http://purl.org/spar/datacite/PrimaryResourceIdentifier
+  dc-has-id: http://purl.org/spar/datacite/hasIdentifier
+  dc-has-authors: http://purl.org/spar/datacite/hasCreatorList
+  dc-journal: http://purl.org/spar/datacite/OrganizationIdentifierScheme
+  dc-title: http://purl.org/dc/elements/1.1/title
+  dc-date: http://purl.org/dc/elements/1.1/date
+  co-authors: http://purl.org/co/List
+  dc-id: http://purl.org/spar/datacite/
+  ensemble-id: http://edamontology.org/data_2610
+  has-output: http://edamontology.org/has_output
+  doi: 'https://doi.org/'
+  alt-id: http://www.geneontology.org/formats/oboInOwl#hasAlternativeId
+  NCBIGene: 'http://edamontology.org/data_1027
+  UniProtKB: 'http://purl.uniprot.org/uniprot/'
+  PMC: 'http://europepmc.org/articles/PMC'
+  EDAM-DATA: 'http://edamontology.org/data_'
+  EDAM-FORMAT: 'http://edamontology.org/format_'
+
+mappings:
+  articles:
+    sources:
+      - ['asd_article_metadata.csv~csv']
+    s: owl:Thing
+    po:
+      - [dc-doi, $(doi)]
+      - [dc-title, $(title)]
+      - [dc-journal, $(journal)]
+      - [dc-date, $(year)]
+      - p: has-output:
+        o:
+          mapping: genes
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(doi), o]
+              - [str2, $(ensemble_id), s]
+  genes:
+    sources:
+      - ['dataset_test1.csv~csv']
+    s: ensemble-id:$(ensemble_id)
+    po:
+      - [alt-id, NCBIGene$(Entrez ID)]
+
+

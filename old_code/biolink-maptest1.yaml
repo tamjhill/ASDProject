@@ -1,0 +1,33 @@
+name: asd-kg
+
+OBO: http://purl.obolibrary.org/obo/
+biolink: https://w3id.org/biolink/vocab/
+rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs: http://www.w3.org/2000/01/rdf-schema#
+xsd: http://www.w3.org/2001/XMLSchema#
+
+mappings:
+  articles:
+    sources:
+      - ['asd_article_metadata.csv~csv']
+    s: biolink:doi:$(doi)
+    po:
+      - [a, biolink:Article]
+      - [biolink:same_as, biolink:ID:$(pmid)]
+      - p: biolink:mentions
+        o:
+          - mapping: genes
+            condition:
+              function: equal
+              parameters:
+                - [str1, biolink:ID$(doi), o]
+                - [str2, biolink:gene:$(ensemble_id), s]
+  genes:
+    sources:
+      - ['dataset_test1.csv~csv']
+    s: biolink:gene:$(ensemble_id)
+    po:
+      - [biolink:same_as, biolink:gene:$(entrez_id)]
+
+
+

@@ -1,0 +1,23 @@
+@prefix OBO: <http://purl.obolibrary.org/obo/> .
+@prefix biolink: <https://w3id.org/biolink/vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:uuid:5b06e86f-d768-4cd9-ac27-abe31e95ab1e> rdf:object OBO:MONDO_0005002 ;
+    rdf:predicate biolink:contributes_to ;
+    rdf:subject <http://identifiers.org/hgnc/11603> ;
+    biolink:category biolink:GeneToDiseaseAssociation ;
+    biolink:provided_by <https://archive.monarchinitiative.org/201806/gwascatalog> ;
+    biolink:publications <http://www.ncbi.nlm.nih.gov/pubmed/26634244>,
+        <http://www.ncbi.nlm.nih.gov/pubmed/26634245> ;
+    biolink:relation OBO:RO_0003304 .
+
+<http://identifiers.org/hgnc/11603> rdfs:label "TBX4"^^xsd:string ;
+    biolink:category biolink:Gene ;
+    biolink:contributes_to OBO:MONDO_0005002 ;
+    biolink:provided_by <https://archive.monarchinitiative.org/201806/gwascatalog> .
+
+OBO:MONDO_0005002 rdfs:label "chronic obstructive pulmonary disease"^^xsd:string ;
+    biolink:category biolink:Disease ;
+    biolink:primary_knowledge_source <https://archive.monarchinitiative.org/201806/gwascatalog> .

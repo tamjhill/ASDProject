@@ -22,8 +22,8 @@ from metapub import PubMedFetcher
 def get_search_result():
     Entrez.email = "thill09@student.bbk.ac.uk"
     handle = Entrez.esearch(db='pubmed',
-                            term='(autism[title] AND brain AND transcriptomic AND expression AND rna)',
-                            retmax='10',
+                            term='((autism[title] or ASD[title) AND brain AND transcriptomic AND expression AND rna AND sequencing)',
+                            retmax='20',
                             retmode='xml')
     search_results = Entrez.read(handle)
     return search_results
@@ -148,10 +148,15 @@ def get_metadata(plist, dlist):
         journals[pmid] = fetch.article_by_pmid(pmid).journal 
     Journal = pd.DataFrame(list(journals.items()), columns=['pmid', 'journal'])
 
+    abstracts = {}
+    for pmid in plist:
+        abstracts[pmid] = fetch.article_by_pmid(pmid).abstract
+    Abstract = pd.DataFrame(list(abstracts.items()), columns=['pmid', 'abstract'])
+
     Doi = pd.DataFrame({'pmid': plist, 'doi': dlist})
 
     # Merge all DataFrames into a single one
-    data_frames = [Title, Date, Journal, Doi]
+    data_frames = [Title, Date, Journal, Doi, Abstract]
     df_merged = reduce(lambda  left, right: pd.merge(left, right, on=['pmid'], how='outer'), data_frames)
 
     # Export the merged DataFrame to a CSV file
