@@ -1,0 +1,66 @@
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX biolink: <https://w3id.org/biolink/vocab/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#PREFIX doi: <https://doi.org/>
+#PREFIX ogg: <http://purl.obolibrary.org/obo/ogg.owl>
+PREFIX datacite: <http://purl.org/spar/datacite>
+PREFIX edam: <http://edamontology.org/>
+PREFIX dc-doi: <http://purl.org/spar/datacite/PrimaryResourceIdentifier>
+PREFIX dc-has-id: <http://purl.org/spar/datacite/hasIdentifier>
+PREFIX dc-has-authors: <http://purl.org/spar/datacite/hasCreatorList>
+PREFIX dc-journal: <http://purl.org/spar/datacite/OrganizationIdentifierScheme>
+PREFIX dc-title: <http://purl.org/dc/elements/1.1/title>
+PREFIX dc-date: <http://purl.org/dc/elements/1.1/date>
+PREFIX co-authors: <http://purl.org/co/List>
+PREFIX dc-id: <http://purl.org/spar/datacite/>
+#PREFIX ensemble-id: <http://edamontology.org/data_2610>
+PREFIX has-output: <http://edamontology.org/has_output>
+PREFIX alt-id: <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId>
+PREFIX NCBIGene: <http://edamontology.org/data_1027>
+#PREFIX UniProtKB: <http://purl.uniprot.org/uniprot/>
+#PREFIX PMC: <http://europepmc.org/articles/PMC>
+#PREFIX EDAM-DATA: <http://edamontology.org/data_>
+#PREFIX EDAM-FORMAT: <http://edamontology.org/format_>
+
+CONSTRUCT {
+  ?filename has-output: ?columnValue
+}
+FROM <file:///path/to/your/file.csv>
+WHERE {
+  BIND(IRI(CONCAT("http://example.org/file/", ENCODE_FOR_URI(?_fileName))) AS ?filename)
+  BIND(?_csvRow AS ?row)
+  
+  # Iterate through all columns
+  ?row ?columnName ?columnValue .
+  
+  # Exclude the special ?_fileName column
+  FILTER(?columnName != "?_fileName")
+}
+
+
+
+CONSTRUCT { 
+   ?URI a biolink:pmid ;
+      a biolink:Article ;
+      dc-title: ?title ;
+      dc-journal: ?journal ;
+      dc-date: ?y ;
+      dc-doi: ?doi
+}
+#FROM <file:data\asd_article_metadata.csv>
+WHERE { 
+   BIND (URI(CONCAT('https://pubmed.ncbi.nlm.nih.gov/', ?pmid)) AS ?URI)
+   BIND (xsd:integer(?year) AS ?y)
+}
+
+CONSTRUCT { 
+   ?URIGene a biolink:Gene ;
+      a  ?ensemble_id ;
+      alt-id: ?entrez_id ;
+      alt-id: ?Symbol ;
+      has-output: ?Change_relative_to_controls
+}
+#FROM <file:data\dataset_test1.csv>
+WHERE { 
+   BIND (URI(CONCAT('https://www.ensembl.org/Multi/Search/Results?q=', ?ensemble_id)) AS ?URIGene)
+}

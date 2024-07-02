@@ -22,8 +22,13 @@ from metapub import PubMedFetcher
 def get_search_result():
     Entrez.email = "thill09@student.bbk.ac.uk"
     handle = Entrez.esearch(db='pubmed',
+<<<<<<< HEAD
                             term='((autism[title] or ASD[title] AND brain AND transcriptomic AND expression AND rna AND sequencing)',
                             retmax='10',
+=======
+                            term='((autism[title] or ASD[title) AND brain AND transcriptomic AND expression AND rna AND sequencing)',
+                            retmax='20',
+>>>>>>> 85d51d638d226caa742fc1b6f2febc20341adfc5
                             retmode='xml')
     search_results = Entrez.read(handle)
     return search_results
