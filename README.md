@@ -5,33 +5,30 @@ Overall plan for the code:
     - Completed in processing.py
 
 
-2. retrieving pdf of article, or article summary
+2. retrieving article metadata, abstracts and supporting files
 
-    - Completed in processing.py, returns all retrievable articles in pdf format with the doi as its name
-        nougat? See https://arxiv.org/abs/2308.13418
-    - 
+    - Completed in processing.py
 
 
-3. retrieving raw data from articles
+3. checking each data file for relevant expression info
 
-   - Completed in processing.py, returns supp. info files in directory for each article
-
-   
-4. checking each data file has the correct metadata to link back
-
-    - OpenAI metadata tagger?
+    - dataconvert.py
    
 
-5. vectorising, embedding and storing the data
+4. data cleaning
 
-    - 
-
-6. creating RAG to analyse the stored data
+    - csv_data_cleaning.py (needs more)
 
 
+5. mapping to rdf triples
 
-7. visualisation of the stored data
+    - create_rdf_test.py
 
 
+6. data testing
 
-8. analysis on the stored data
+    - graph_queries_v2.py , graph_queries_3.py (and ongoing)
+    - outputs: see output_tests directory
+
+
+7. data analysis

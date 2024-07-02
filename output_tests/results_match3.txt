@@ -1,0 +1,1014 @@
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb855
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0020217895507812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2195
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0063896179199218
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2787
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055809020996093
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb80
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0008081197738647
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb132
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 9.1552734375e-05
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1942
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0020904541015625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2946
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0018156766891479
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1624
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001068115234375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4614
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00030517578125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3911
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0003814697265625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4460
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0076904296875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb642
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0106887817382812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4377
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0027848482131958
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3815
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.004638671875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb314
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0115160942077637
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2715
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0002498030662536
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1506
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001678466796875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb371
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0027848482131958
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3967
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0013427734375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb547
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0148651599884033
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2657
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0013427734375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3787
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0111565589904785
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb527
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001678466796875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3886
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0039176940917968
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2596
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0015792846679687
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb717
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000579833984375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2335
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0136165618896484
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2224
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0178728103637695
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1722
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0063896179199218
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1307
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0006561279296875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3165
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0067105293273925
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3593
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0025787353515625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4449
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0015792846679687
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3262
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0105078220367432
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2973
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0090160369873046
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2971
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 9.1552734375e-05
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2639
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0006561279296875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb505
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0005564093589782
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb817
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000579833984375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1858
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0126914978027344
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3250
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000152587890625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb939
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0128631591796875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb744
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055809020996093
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3866
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0011711120605468
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1630
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0027848482131958
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1596
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0101091861724853
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1386
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0048599243164062
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4327
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0126914978027344
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3474
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0003814697265625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3824
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 6.36577606201172e-05
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4189
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0141658782958984
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb327
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0111565589904785
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb491
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00665283203125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3618
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00030517578125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3726
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0071449279785156
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb843
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001007080078125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2537
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 3.0517578125e-05
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1660
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.002838134765625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb697
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0016253590583801
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2142
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0071010589599609
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4110
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0101091861724853
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1906
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.002415657043457
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2170
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.007920503616333
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3386
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0005564093589782
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3974
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0025787353515625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1910
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055418014526367
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1707
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 6.103515625e-05
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb963
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000152587890625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1328
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0095757246017456
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb398
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0095757246017456
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1099
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0149993896484375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1698
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055809020996093
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb256
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0136165618896484
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4459
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0027848482131958
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1641
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 6.55651092529297e-06
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb110
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0072956085205078
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb748
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0071010589599609
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3138
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0031585693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4493
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0074520111083984
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb386
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00030517578125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb564
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0003814697265625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1054
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.01352858543396
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3365
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0031585693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb475
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0016253590583801
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1864
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0072956085205078
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb166
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0065765380859375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1077
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0033645629882812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3122
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0111565589904785
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3629
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0030878782272338
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3708
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0028076171875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3016
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0014114379882812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1153
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0036544799804687
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2025
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0001623034477233
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb252
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.010406494140625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2190
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0005855560302734
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1983
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001007080078125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3083
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0030878782272338
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2396
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0106887817382812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1269
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0021359920501709
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4194
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0094356536865234
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb972
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055809020996093
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3910
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001007080078125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1943
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0002899169921875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb531
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0047454833984375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3731
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0039176940917968
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1705
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00384521484375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1810
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0034192204475402
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3602
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00933837890625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2192
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0178728103637695
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3410
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0148651599884033
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1185
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0006313323974609
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3340
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0157804489135742
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2558
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0020904541015625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3624
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055999755859375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2468
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0004196166992187
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4019
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0128631591796875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3775
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0018156766891479
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1971
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0101251602172852
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb482
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0024824142456054
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2205
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0089645385742187
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2660
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0060327053070068
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb100
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0025787353515625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb835
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055694580078125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb959
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0008081197738647
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4313
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0136165618896484
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4590
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0101251602172852
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2317
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0148651599884033
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2007
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000579833984375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3735
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0039006471633911
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1759
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0126914978027344
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1690
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0136165618896484
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb361
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0028076171875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb409
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.007920503616333
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4010
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0031585693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb304
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0004894733428955
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3560
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0061798095703125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb140
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000213623046875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3335
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0038740634918212
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb791
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0157804489135742
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2088
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0053291320800781
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2536
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0149993896484375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1963
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0025079250335693
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3804
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0010452270507812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4090
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055418014526367
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3223
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0055999755859375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4575
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0039176940917968
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb995
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00665283203125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2124
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.007904052734375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2404
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0115160942077637
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2116
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000213623046875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2474
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0042848587036132
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3368
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00933837890625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb397
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0120792388916016
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb138
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0048599243164062
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4122
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0071010589599609
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb418
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0089645385742187
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2200
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000213623046875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb369
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0122945308685303
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb315
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0048599243164062
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1891
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000335693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1062
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0025787353515625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2750
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.007904052734375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3318
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00384521484375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2819
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0021359920501709
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3783
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0031585693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2019
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0065765380859375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4225
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0031585693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2731
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0048789978027343
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4426
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0020251274108886
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb301
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0065765380859375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4492
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0106887817382812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2684
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.004220962524414
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1039
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0149993896484375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1731
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0065765380859375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3185
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0002670288085937
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3035
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0115160942077637
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb4002
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0031585693359375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1151
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0003764033317565
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb331
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0054144859313964
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1556
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000213623046875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2231
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0013427734375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2251
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0003764033317565
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1175
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0141658782958984
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1922
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0120792388916016
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb153
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0120792388916016
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3161
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0020904541015625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3109
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0058976411819458
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb994
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0032787322998046
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3636
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0128631591796875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1968
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.002415657043457
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3396
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.001678466796875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb495
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 7.2479248046875e-05
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1860
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0106887817382812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb2421
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.00665283203125
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3306
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.004220962524414
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb885
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.000152587890625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3155
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0020904541015625
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb672
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0076904296875
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb1291
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0014114379882812
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb416
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0053291320800781
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3293
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0023994445800781
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb3287
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0013427734375
+
+Root: https://doi.org/10.1038/s41586-022-05377-7
+Subject: ne7e3e659d3cb408f8441d99ffc172dceb25
+P-value predicate: rdf:predicate/wilcoxon_pvalue_twosided
+P-value: 0.0094356536865234

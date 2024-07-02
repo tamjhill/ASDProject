@@ -1,0 +1,44 @@
+Matched terms: ['SET', 'TF']
+Return value: 10.3390/genes12121901
+
+Matched terms: ['YY1', 'WAS', 'TCF4', 'AR', 'ESR1', 'RORA', 'SOX5', 'IMPACT']
+Return value: 10.3390/ijms222413201
+
+Matched terms: ['SCN2A']
+Return value: 10.1016/j.nbd.2022.105690
+
+Matched terms: ['WAS']
+Return value: 10.1038/s41598-022-14077-1
+
+Matched terms: ['CIT']
+Return value: 10.1038/s41380-022-01714-4
+
+Matched terms: ['SET']
+Return value: 10.3389/fncir.2022.982721
+
+Matched terms: ['TF', 'WAS', 'FAS']
+Return value: 10.1080/07391102.2022.2143900
+
+Matched terms: ['WAS']
+Return value: 10.3389/fmicb.2022.1009502
+
+Matched terms: ['WAS', 'CD14']
+Return value: 10.33696/immunology.4.146
+
+Matched terms: ['SET']
+Return value: 10.1186/s12859-023-05278-0
+
+Matched terms: ['SET', 'TES', 'ATRX', 'IMPACT']
+Return value: 10.1186/s13229-023-00554-5
+
+Matched terms: ['WAS']
+Return value: 10.1111/ejn.16155
+
+Matched terms: ['SET', 'WAS']
+Return value: 10.1007/s00335-024-10036-5
+
+Matched terms: ['WAS', 'ANXA2', 'SEMA5A', 'SLC9A9', 'JUNB', 'IMPACT']
+Return value: 10.1186/s13293-024-00614-2
+
+Matched terms: ['GRN']
+Return value: 10.1126/science.adh2602

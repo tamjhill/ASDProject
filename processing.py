@@ -1,5 +1,5 @@
-#This file searches rthe Entrez database for relevant papers, retreives their DOIs and obtains a pdf 
-# of the original paper, as well as all supporting data xlsx files
+#This file searches rthe Entrez database for relevant papers, retreives their DOIs metadata, obtains a pdf 
+# of the original paper, and all supporting data xlsx files
 
 # importing libraries
 from Bio import Entrez
@@ -22,7 +22,7 @@ from metapub import PubMedFetcher
 def get_search_result():
     Entrez.email = "thill09@student.bbk.ac.uk"
     handle = Entrez.esearch(db='pubmed',
-                            term='(autism[title] AND brain AND transcriptomic AND expression AND rna)',
+                            term='((autism[title] or ASD[title] AND brain AND transcriptomic AND expression AND rna AND sequencing)',
                             retmax='10',
                             retmode='xml')
     search_results = Entrez.read(handle)
@@ -62,10 +62,11 @@ def get_urls(dlist):
 
 
 # retrieve supplementary files from the article
-def get_tables(url):
+def get_tables(url, doi):
     main_dir = 'data'
     supp_output_dir = 'supp_data'
-    new_dir = url.rsplit('/', 1)[-1]
+    new_doiref = doi.replace("/", "_")
+    new_dir = new_doiref
     new_path = os.path.join(main_dir, supp_output_dir, new_dir)
     # Create the directory if it doesn't exist
     os.makedirs(new_path, exist_ok=True)
@@ -148,10 +149,15 @@ def get_metadata(plist, dlist):
         journals[pmid] = fetch.article_by_pmid(pmid).journal 
     Journal = pd.DataFrame(list(journals.items()), columns=['pmid', 'journal'])
 
+    abstracts = {}
+    for pmid in plist:
+        abstracts[pmid] = fetch.article_by_pmid(pmid).abstract
+    Abstract = pd.DataFrame(list(abstracts.items()), columns=['pmid', 'abstract'])
+
     Doi = pd.DataFrame({'pmid': plist, 'doi': dlist})
 
     # Merge all DataFrames into a single one
-    data_frames = [Title, Date, Journal, Doi]
+    data_frames = [Title, Date, Journal, Doi, Abstract]
     df_merged = reduce(lambda  left, right: pd.merge(left, right, on=['pmid'], how='outer'), data_frames)
 
     # Export the merged DataFrame to a CSV file
@@ -176,7 +182,11 @@ def main():
     for u in url_data:
         try:
             get_pdfs(u)
-            get_tables(u)
+        except urllib.error.HTTPError:
+            pass
+    for u, d in zip(url_data, doi_data):
+        try:
+            get_tables(u, d)
         except urllib.error.HTTPError:
             pass
     print("All articles and data retrived")
