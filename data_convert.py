@@ -18,18 +18,14 @@ def process_excel_file(file_path):
         # Check if the sheet has a column with "log fold change" or similar
         log_fold_col = None
         for col in df.columns:
-            if any(phrase in col.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc']):
+            if any(phrase in col.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2']):
                 log_fold_col = col
                 break
         
         # If a matching column is found, save the sheet as CSV
         if log_fold_col:
-<<<<<<< HEAD
             newfile = sheet_name.replace(" ", "_")
             output_file = os.path.join(output_dir, f"{newfile}.csv")
-=======
-            output_file = os.path.join(output_dir, f"{sheet_name}.csv")
->>>>>>> 85d51d638d226caa742fc1b6f2febc20341adfc5
             df.to_csv(output_file, index=False)
             print(f"Saved {sheet_name} as CSV: {output_file}")
         else:
@@ -44,9 +40,5 @@ def process_data_folder(data_folder):
                 print(f"Processing file: {file_path}")
                 process_excel_file(file_path)
 
-<<<<<<< HEAD
-=======
-# Usage
->>>>>>> 85d51d638d226caa742fc1b6f2febc20341adfc5
 data_folder = "data\supp_data"
 process_data_folder(data_folder)
