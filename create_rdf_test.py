@@ -16,6 +16,7 @@ SCHEMA = Namespace("https://schema.org/")
 EDAM = Namespace("http://edamontology.org/")
 DOI = Namespace("https://doi.org/")
 DCT = Namespace("http://purl.org/dc/terms/")
+PMC = Namespace("https://www.ncbi.nlm.nih.gov/pmc/articles/PMID")
 
 # Bind namespaces to prefixes
 graph.bind("biolink", BIOLINK)
@@ -27,45 +28,46 @@ graph.bind("schema", SCHEMA)
 graph.bind("edam", EDAM)
 graph.bind("doi", DOI)
 graph.bind("dct", DCT)
+graph.bind("pmc", PMC)
 
 # Root directory to search for CSV files
-root_dir = "C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data\\test_data"
+root_dir = "C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data"
 
 def process_metadata_csv(csv_file_path):
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         
         for row in reader:
-            if 'doi' in row and row['doi']:
-                doi_uri = DOI[row['doi']]
+            if 'pmid' in row and row['pmid']:
+                pmid_uri = PMC[row['pmid']]
                 
                 for column, value in row.items():
-                    if column == 'pmid' and value:
-                        graph.add((doi_uri, DCT.identifier, Literal(value)))
+                    if column == 'doi' and value:
+                        graph.add((pmid_uri, DCT.identifier, DOI[value]))
                 for column, value in row.items():
                     if column == 'title' and value:
-                        graph.add((doi_uri, DCT.title, Literal(value)))
+                        graph.add((pmid_uri, DCT.title, Literal(value)))
                 for column, value in row.items():
                     if column == 'year' and value:
-                        graph.add((doi_uri, DCT.date, Literal(value)))
+                        graph.add((pmid_uri, DCT.date, Literal(value)))
                 for column, value in row.items():
                     if column == 'journal' and value:
-                        graph.add((doi_uri, DCT.publisher, Literal(value)))
+                        graph.add((pmid_uri, DCT.publisher, Literal(value)))
 
 def process_regular_csv(csv_file_path):
     # Get the filename without extension and the folder name (which will be used as the DOI)
     filename = os.path.splitext(os.path.basename(csv_file_path))[0]
-    folder_name = os.path.basename(os.path.dirname(csv_file_path))
-    doi = folder_name.replace("_", "/")
+    pmid = os.path.basename(os.path.dirname(csv_file_path))
+    #doi = folder_name.replace("_", "/")
     
     # Create a URI for the dataset and for the DOI
     dataset_uri = BNode(filename)
-    doi_uri = DOI[doi]
+    pmid_uri = PMC[pmid]
     
     # Add dataset type and the triple linking DOI to dataset
     graph.add((dataset_uri, RDF.type, BIOLINK.Dataset))
-    graph.add((doi_uri, EDAM.has_output, dataset_uri))
-    graph.add((doi_uri, RDF.type, DCT.identifier))
+    graph.add((pmid_uri, EDAM.has_output, dataset_uri))
+    graph.add((pmid_uri, RDF.type, DCT.identifier))
     
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
@@ -75,9 +77,11 @@ def process_regular_csv(csv_file_path):
             row_node = BNode()
             graph.add((dataset_uri, EDAM.has_output, row_node))
             
+            possible_column_names = ['symbol', 'gene', 'gene_symbol', 'gene_name', 'genesymbol', 'genename']
+    
             for column, value in row.items():
                 if value:  # Only add triples if the value is not empty
-                    if column.lower() == 'symbol':
+                    if column.lower() in possible_column_names :
                         #graph.add((row_node, rdflib.RDF.type, BIOLINK.Gene))
                         graph.add((row_node, BIOLINK.symbol, Literal(value)))
                     elif 'ensembl' in column.lower() and 'id' in column.lower():
@@ -100,5 +104,5 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
             else:
                 process_regular_csv(csv_file_path)
 
-graph.serialize(destination='test_graph4.ttl', format='turtle')
-print("Combined graph has been serialized to test_graph4.ttl")
+graph.serialize(destination='main_graph.nt', format='nt')
+print("Combined graph has been serialized to main_graph.nt")

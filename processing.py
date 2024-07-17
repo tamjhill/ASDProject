@@ -176,7 +176,7 @@ def get_pdfs(url):
         if pdf_link:
             pdf_url = pdf_link['href']
         else:
-            print("No PDF link found on the page.")
+            print("No article PDF link found on the page.")
             return None
 
     # Ensure we have a full URL

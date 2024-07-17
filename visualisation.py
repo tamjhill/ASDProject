@@ -65,15 +65,3 @@ fig = go.Figure(data=[edge_trace, node_trace],
 #fig.show()
 
 
-
-# Parse the N-Triples file and create the network graph (same code as before)
-# ...
-
-app = dash.Dash(__name__)
-
-app.layout = html.Div([
-    dcc.Graph(figure=fig)
-])
-
-if __name__ == '__main__':
-    app.run_server(debug=True)

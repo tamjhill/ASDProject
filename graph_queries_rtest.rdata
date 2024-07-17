@@ -1,0 +1,11 @@
+sparql <-
+  'SELECT  ?Species ?Sepal_Length ?Sepal_Width ?Petal_Length  ?Petal_Width
+WHERE {
+ ?s <iris:Species>  ?Species .
+ ?s <iris:Sepal.Width>  ?Sepal_Width .
+ ?s <iris:Sepal.Length>  ?Sepal_Length . 
+ ?s <iris:Petal.Length>  ?Petal_Length .
+ ?s <iris:Petal.Width>  ?Petal_Width 
+}'
+
+iris2 <- rdf_query(rdf, sparql)
