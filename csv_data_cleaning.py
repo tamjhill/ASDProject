@@ -20,7 +20,7 @@ def process_csv_file(file_path):
     # Remove rows with multiple NAs or blanks
     df_cleaned = df.dropna(thresh=len(df.columns)//4)
     # Save the processed dataframe back to CSV
-    df_cleaned.to_csv(file_path, index=False)
+    df_cleaned.to_csv(file_path, index=False, sep=",")
     print(f"Processed and overwritten: {file_path}")
 
 def process_data_folder(data_folder):

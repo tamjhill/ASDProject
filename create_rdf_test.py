@@ -18,6 +18,8 @@ EDAM = Namespace("http://edamontology.org/")
 DOI = Namespace("https://doi.org/")
 DCT = Namespace("http://purl.org/dc/terms/")
 PMC = Namespace("https://www.ncbi.nlm.nih.gov/pmc/articles/PMID")
+OWL = Namespace("http://www.w3.org/2002/07/owl#")
+
 
 # Bind namespaces to prefixes
 graph.bind("biolink", BIOLINK)
@@ -30,6 +32,7 @@ graph.bind("edam", EDAM)
 graph.bind("doi", DOI)
 graph.bind("dct", DCT)
 graph.bind("pmc", PMC)
+graph.bind("owl", OWL)
 
 # Root directory to search for CSV files
 root_dir = "C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data"
@@ -62,12 +65,13 @@ def process_regular_csv(csv_file_path):
     #doi = folder_name.replace("_", "/")
     
     # Create a URI for the dataset and for the DOI
-    dataset_uri = BNode(filename)
+    dataset_uri = BNode()
     pmid_uri = PMC[pmid]
     
     # Add dataset type and the triple linking DOI to dataset
     graph.add((dataset_uri, RDF.type, BIOLINK.Dataset))
     graph.add((pmid_uri, EDAM.has_output, dataset_uri))
+    graph.add((dataset_uri, OWL.sameAs, Literal(filename)))
     graph.add((pmid_uri, RDF.type, DCT.identifier))
     
     with open(csv_file_path, 'r') as csvfile:
@@ -110,5 +114,5 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
             else:
                 process_regular_csv(csv_file_path)
 
-graph.serialize(destination='main_graph.nt', format='nt')
+graph.serialize(destination='main_graph.nt', format='nt', encoding= "utf-8" )
 print("Combined graph has been serialized to main_graph.nt")

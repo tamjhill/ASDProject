@@ -26,7 +26,7 @@ def process_excel_file(file_path):
         
         # If a matching column is found, save the sheet as CSV
         if log_fold_col:
-            newfile = sheet_name.replace(" ", "_")
+            newfile = sheet_name.replace(" ", "")
             output_file = os.path.join(output_dir, f"{newfile}.csv")
             df.to_csv(output_file, index=False)
             print(f"Saved {sheet_name} as CSV: {output_file}")
@@ -55,11 +55,11 @@ def process_old_file(file_path):
 
         # If a matching column is found, save the sheet as CSV
         if log_fold_col is not None:
-            newfile = sheet.name.replace(" ", "_")
+            newfile = sheet.name.replace(" ", "")
             output_file = os.path.join(output_dir, f"{newfile}.csv")
 
             with open(output_file, 'w', newline='') as csvfile:
-                writer = csv.writer(csvfile)
+                writer = csv.writer(csvfile, delimiter=",")
                 writer.writerow(headers)  # Write headers
 
                 for row in range(1, sheet.nrows):  # Start from 1 to skip header
@@ -83,5 +83,5 @@ def process_data_folder(data_folder):
                 print(f"Processing file: {file_path}")
                 process_old_file(file_path)
 
-data_folder = "data\supp_data"
+data_folder = "data\\supp_data"
 process_data_folder(data_folder)
