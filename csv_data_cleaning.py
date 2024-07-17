@@ -1,16 +1,24 @@
 import pandas as pd
 import os
+import re
 
 def process_csv_file(file_path):
     # Read the CSV file
     df = pd.read_csv(file_path)
     
-    # Convert column titles to lowercase and replace spaces with underscores
-    df.columns = [col.lower().replace(' ', '_') for col in df.columns]
+    # Function to process column names
+    def process_column_name(col):
+        col = col.lower().replace(' ', '_')
+        if re.search(r'p[-_]?val(ue)?', col):
+            return 'pvalue'
+        elif re.search(r'(log[-_]?fold[-_]?(change|2)?|lf2?|fold[-_]?change)', col):
+            return 'logfold'
+        return col
     
+    # Apply the processing function to column names
+    df.columns = [process_column_name(col) for col in df.columns]
     # Remove rows with multiple NAs or blanks
-    df_cleaned = df.dropna(thresh=len(df.columns)//5)
-    
+    df_cleaned = df.dropna(thresh=len(df.columns)//4)
     # Save the processed dataframe back to CSV
     df_cleaned.to_csv(file_path, index=False)
     print(f"Processed and overwritten: {file_path}")

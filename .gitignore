@@ -298,3 +298,8 @@ data/test_data/30545856/ASD.TWAS.csv
 data/test_data/31097668/ASD_DEGs.csv
 data/test_data/36323788/All_ARI_Genes.csv
 data/test_data/37041460/DEGs_common_to_all_subtypes.csv
+test_data/30545856/ASD.TWAS.csv
+test_data/31097668/ASD_DEGs.csv
+test_data/36323788/All_ARI_Genes.csv
+test_data/37041460/DEGs_common_to_all_subtypes.csv
+main_graph.nt

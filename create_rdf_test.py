@@ -2,6 +2,7 @@ import csv
 import rdflib
 from rdflib import Namespace, URIRef, Literal, BNode
 import os
+from rdflib.namespace import XSD
 
 # Create the graph object which holds the triples
 graph = rdflib.Graph()
@@ -76,22 +77,27 @@ def process_regular_csv(csv_file_path):
             # Create a blank node for each row
             row_node = BNode()
             graph.add((dataset_uri, EDAM.has_output, row_node))
-            
+            graph.add((row_node, RDF.type, EDAM.data))
             possible_column_names = ['symbol', 'gene', 'gene_symbol', 'gene_name', 'genesymbol', 'genename']
     
             for column, value in row.items():
                 if value:  # Only add triples if the value is not empty
-                    if column.lower() in possible_column_names :
-                        #graph.add((row_node, rdflib.RDF.type, BIOLINK.Gene))
+                    if 'logfold' in column.lower():
+                        graph.add((row_node, EDAM.data_3754, Literal(value)))
+                    elif 'pvalue' in column.lower():
+                        graph.add((row_node, EDAM.data_2082, Literal(value)))
+                    elif column.lower() in possible_column_names :
                         graph.add((row_node, BIOLINK.symbol, Literal(value)))
-                    elif 'ensembl' in column.lower() and 'id' in column.lower():
+                    elif 'ensembl' in column.lower():
                         graph.add((row_node, ENSEMBL.id, Literal(value)))
-                    elif ('entrez' in column.lower() and 'id' in column.lower()) or ('ncbi' in column.lower() and 'gene' in column.lower()):
+                    elif ('entrez' in column.lower()) or ('ncbi' in column.lower()):
                         graph.add((row_node, NCBIGENE.id, Literal(value)))
                     else:
-                        # For all other columns, use a generic predicate
-                        predicate = URIRef(f"rdf:predicate/{column}")
-                        graph.add((row_node, predicate, Literal(value)))
+                        continue
+#                    else:
+#                        # For all other columns, use a generic predicate
+#                        predicate = URIRef(f"rdf:predicate/{column}")
+#                        graph.add((row_node, predicate, Literal(value)))
 
 for dirpath, dirnames, filenames in os.walk(root_dir):
     for filename in filenames:
