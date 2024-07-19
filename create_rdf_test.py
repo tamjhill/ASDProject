@@ -17,7 +17,7 @@ SCHEMA = Namespace("https://schema.org/")
 EDAM = Namespace("http://edamontology.org/")
 DOI = Namespace("https://doi.org/")
 DCT = Namespace("http://purl.org/dc/terms/")
-PMC = Namespace("https://www.ncbi.nlm.nih.gov/pmc/articles/PMID")
+PMC = Namespace("https://pubmed.ncbi.nlm.nih.gov/")
 OWL = Namespace("http://www.w3.org/2002/07/owl#")
 
 
