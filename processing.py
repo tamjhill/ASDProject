@@ -7,12 +7,9 @@ from metapub.convert import pmid2doi
 import os
 from bs4 import BeautifulSoup,  SoupStrainer
 import requests
-# import re
 from urllib.request import urlopen, urlretrieve
-# import shutil
 import urllib.request, urllib.error, urllib.parse
 import urllib.request
-# import textract
 import pandas as pd
 from functools import reduce
 from metapub import PubMedFetcher
@@ -20,14 +17,15 @@ from selenium import webdriver
 from urllib.parse import urljoin
 
 
-# retrieve articles and convert to DOIs (which will then be converted to urls)
 # Article search, returning PMIDs for articles with search terms taken from related article titles.
-
 def get_search_result():
-    Entrez.email = "thill09@student.bbk.ac.uk"
+    Entrez.email = input("Enter email address for NCBI Entrez: ")
+    while '@' not in Entrez.email or '.' not in Entrez.email:
+        print("Invalid email format. Try again.")
+        Entrez.email = input("Enter email address for NCBI Entrez: ")
     handle = Entrez.esearch(db='pubmed',
                             term='((autism[title] or ASD[title] AND brain AND transcriptomic AND expression AND rna AND sequencing NOT Review[Publication Type]))',
-                            retmax='10',
+                            retmax='30',
                             sort='relevance',
                             retmode='xml')
     search_results = Entrez.read(handle)
@@ -41,7 +39,6 @@ def get_pmids(search_res):
     return initial_list
 
 # for each PMID, convert to DOI and add to new list
-#NB - instead make this a dictionary to retain original PMID?
 def get_dois(plist):
     doi_list = []
     for i in plist:
@@ -57,15 +54,6 @@ def get_dois(plist):
     return doi_list
 
 # convert each doi to a url
-"""def get_urls(dlist):
-    url_list = []
-    for d in range(len(dlist)):
-        prefix = 'https://doi.org/'
-        new_url = prefix + dlist[d]
-        url_list.append(new_url)
-    return url_list"""
-
-#https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/31097668/
 def get_urls(plist):
     url_list = []
     for p in range(len(plist)):
@@ -76,38 +64,6 @@ def get_urls(plist):
     return url_list
 
 # retrieve supplementary files from the article
-"""def get_tables(url, doi):
-    main_dir = 'data'
-    supp_output_dir = 'supp_data'
-    new_doiref = doi.replace("/", "_")
-    new_dir = new_doiref
-    new_path = os.path.join(main_dir, supp_output_dir, new_dir)
-    # create the directory if it doesn't exist
-    os.makedirs(new_path, exist_ok=True)
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    
-    req = urllib.request.Request(url, headers=headers)
-    try:
-        with urllib.request.urlopen(req) as u:
-            html = u.read().decode('utf-8')
-    except urllib.error.HTTPError as e:
-        print(f"HTTP Error {e.code}: {e.reason}")
-        return
-
-    soup = BeautifulSoup(html, "html.parser")
-    for link in soup.select('a[href^="https://"]'):
-        href = link.get('href')
-        if not any(href.endswith(x) for x in ['.csv', '.xls', '.xlsx']):
-            continue
-        filename = os.path.join(new_path, href.rsplit('/', 1)[-1])
-        if os.path.isfile(filename):
-            print(f"File '{filename}' already exists. Skipping file creation.")
-        else:
-            print("Downloading %s to %s..." % (href, filename))
-            urlretrieve(href, filename)
-            print("Done.")
-    return"""
-
 def get_tables(url, pmid):
     main_dir = 'data'
     supp_output_dir = 'supp_data'
@@ -154,7 +110,6 @@ def get_pdfs(url):
     os.makedirs(output_path, exist_ok=True)
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
-    
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
@@ -164,7 +119,6 @@ def get_pdfs(url):
         return None
 
     soup = BeautifulSoup(html, "html.parser")
-    
     # Look for PDF link in meta tags
     pdf_meta_tag = soup.find('meta', {'name': lambda name: name and 'pdf-link' in name.lower()})
     
@@ -181,12 +135,10 @@ def get_pdfs(url):
 
     # Ensure we have a full URL
     pdf_url = urljoin(url, pdf_url)
-    
     # Extract filename
     filename_part = pdf_url.split('=')[-1] if '=' in pdf_url else pdf_url.split('/')[-1]
     if not filename_part.lower().endswith('.pdf'):
         filename_part += '.pdf'
-
     filename = os.path.join(output_path, filename_part)
 
     if os.path.isfile(filename):
@@ -253,7 +205,6 @@ def get_metadata(plist, dlist):
         df_merged.to_csv(file_path, index=False)
         print(f"File '{file_path}' created.")
     return None
-
 
 
 def main():
