@@ -71,7 +71,8 @@ def get_gene_id(gene_name):
     return None
     
     
-def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
+def process_regular_csv(csv_file_path, counters):
+    matched_genes, unmatched_genes = counters
     filename = os.path.splitext(os.path.basename(csv_file_path))[0]
     pmid = os.path.basename(os.path.dirname(csv_file_path))
     
@@ -108,7 +109,7 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
                         if monarch_uri:
                             graph.add((row_node, BIOLINK.Gene, MONARCH[monarch_uri]))
                             gene_added = True
-                            matched_genes[0] += 1
+                            matched_genes += 1
                             #print(f"Added gene: {value} with HGNC ID: {monarch_uri}")
                             break
                         else:
@@ -119,7 +120,7 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
                             else:
                                 graph.add((row_node, BIOLINK.symbol, Literal(value)))
                             gene_added = True
-                            unmatched_genes[0] += 1
+                            unmatched_genes += 1
                             #print(f"Added gene {value} without HGNC ID")
                             break
                 if gene_added:
@@ -148,8 +149,8 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
 
 # Root directory to search for CSV files
 root_dir = "C:\\Users\\tamjh\\CodeProjects\\ASDProject\\test_data"
-matched_genes = [0]  
-unmatched_genes = [0]  
+matched_genes = 0
+unmatched_genes = 0 
 total_files_processed = 0
 
 for dirpath, dirnames, filenames in os.walk(root_dir):
@@ -161,15 +162,13 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
             if filename == 'asd_article_metadata.csv':
                 process_metadata_csv(csv_file_path)
             else:
-                matched_genes, unmatched_genes = process_regular_csv(csv_file_path, matched_genes, unmatched_genes)
+                matched_genes, unmatched_genes = process_regular_csv(csv_file_path, (matched_genes, unmatched_genes))
             total_files_processed += 1
 
 print("\nProcessing complete. Summary:")
 print(f"Total CSV files processed: {total_files_processed}")
-print(f"Total matched genes: {matched_genes[0]}")
-print(f"Total unmatched genes: {unmatched_genes[0]}")
-print(f"Total genes processed: {matched_genes[0] + unmatched_genes[0]}")
+print(f"Total matched genes: {matched_genes}")
+print(f"Total unmatched genes: {unmatched_genes}")
+print(f"Total genes processed: {matched_genes + unmatched_genes}")
 graph.serialize(destination='main_graph.nt', format='nt', encoding= "utf-8" )
-print("Combined graph has been serialized to test_graph.nt")
-
-
+print("Combined graph has been serialized to main_graph.nt")
