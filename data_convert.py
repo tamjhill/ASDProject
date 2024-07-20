@@ -20,7 +20,7 @@ def process_excel_file(file_path):
         # Check if the sheet has a column with "log fold change" or similar
         log_fold_col = None
         for col in df.columns:
-            if any(phrase in col.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2']):
+            if any(phrase in col.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2', 'lf2', 'lfc']):
                 log_fold_col = col
                 break
         
@@ -36,7 +36,6 @@ def process_excel_file(file_path):
 def process_old_file(file_path):
     # Load the xls file
     wb = xlrd.open_workbook(file_path)
-
     output_dir = os.path.dirname(file_path)
     
     # Iterate through each sheet
@@ -49,7 +48,7 @@ def process_old_file(file_path):
         # Check if the sheet has a column with "log fold change" or similar
         log_fold_col = None
         for col, header in enumerate(headers):
-            if any(phrase in header.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2']):
+            if any(phrase in header.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2', 'lf2']):
                 log_fold_col = col
                 break
 

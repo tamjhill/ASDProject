@@ -3,6 +3,7 @@ import rdflib
 from rdflib import Namespace, URIRef, Literal, BNode
 import os
 from rdflib.namespace import XSD
+import requests
 
 # Create the graph object which holds the triples
 graph = rdflib.Graph()
@@ -58,50 +59,99 @@ def process_metadata_csv(csv_file_path):
                     if column == 'journal' and value:
                         graph.add((pmid_uri, DCT.publisher, Literal(value)))
 
+
+def get_gene_id(gene_name):
+    search_url = "https://api-v3.monarchinitiative.org/v3/api/search"
+    params = {
+        "q": gene_name,
+        "category": "biolink:Gene",
+        "limit": 1
+    }
+    try:
+        response = requests.get(search_url, params=params)
+        response.raise_for_status()
+        data = response.json()
+        if data['items']:
+            # Extract the HGNC ID from the 'id' field
+            monarch_id = data['items'][0]['id']
+            if monarch_id.startswith('HGNC:'):
+                return f"https://monarchinitiative.org/{monarch_id}"
+            # If it's not an HGNC ID, check if it's in the 'equivalent_identifiers'
+            for eq_id in data['items'][0].get('equivalent_identifiers', []):
+                if eq_id.startswith('HGNC:'):
+                    return f"https://monarchinitiative.org/{eq_id}"
+    except requests.exceptions.RequestException as e:
+        print(f"An error occurred while searching for {gene_name}: {e}")
+    return None
+
 def process_regular_csv(csv_file_path):
-    # Get the filename without extension and the folder name (which will be used as the DOI)
     filename = os.path.splitext(os.path.basename(csv_file_path))[0]
     pmid = os.path.basename(os.path.dirname(csv_file_path))
-    #doi = folder_name.replace("_", "/")
     
-    # Create a URI for the dataset and for the DOI
     dataset_uri = BNode()
     pmid_uri = PMC[pmid]
     
-    # Add dataset type and the triple linking DOI to dataset
     graph.add((dataset_uri, RDF.type, BIOLINK.Dataset))
     graph.add((pmid_uri, EDAM.has_output, dataset_uri))
     graph.add((dataset_uri, OWL.sameAs, Literal(filename)))
     graph.add((pmid_uri, RDF.type, DCT.identifier))
     
+    possible_gene_names = ['symbol', 'genesymbol', 'genename', 'geneid', 'ensembl', 'ensemblid', 'entrez', 'entrezid', 'ncbi', 'ncbiid']
+    possible_log_names = ['log2', 'lf2', 'lfc2', 'logfold2', 'log2fc', 'logfoldchange', 'logfold', 'lf', 'logfc', 'foldchange', 'fc', 'lfc', 'enrichment']
+    possible_pval_names = ['padj', 'adjp', 'pvalueadj', 'adjpvalue', 'pvaladj', 'adjpval', 'pvadj', 'adjpv', 'pvalue', 'pval', 'pv']
+    
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
-        
         for row in reader:
-            # Create a blank node for each row
             row_node = BNode()
             graph.add((dataset_uri, EDAM.has_output, row_node))
             graph.add((row_node, RDF.type, EDAM.data))
-            possible_column_names = ['symbol', 'gene', 'gene_symbol', 'gene_name', 'genesymbol', 'genename']
-    
+            
+            gene_added = log_added = pval_added = False
+            
             for column, value in row.items():
-                if value:  # Only add triples if the value is not empty
-                    if 'logfold' in column.lower():
-                        graph.add((row_node, EDAM.data_3754, Literal(value)))
-                    elif 'pvalue' in column.lower():
-                        graph.add((row_node, EDAM.data_2082, Literal(value)))
-                    elif column.lower() in possible_column_names :
-                        graph.add((row_node, BIOLINK.symbol, Literal(value)))
-                    elif 'ensembl' in column.lower():
-                        graph.add((row_node, ENSEMBL.id, Literal(value)))
-                    elif ('entrez' in column.lower()) or ('ncbi' in column.lower()):
-                        graph.add((row_node, NCBIGENE.id, Literal(value)))
+                if value:  # Only process non-empty values
+                    column_lower = column.lower()
+                    
+                    # Check for gene names
+                    if any(name in column_lower for name in possible_gene_names):
+                        if not gene_added:
+                            monarch_uri = get_gene_id(value)
+                            if monarch_uri:
+                                graph.add((row_node, BIOLINK.Gene, URIRef(monarch_uri)))
+                                gene_added = True
+                            else:
+                                if 'ensembl' in column_lower:
+                                    graph.add((row_node, ENSEMBL.id, Literal(value)))
+                                elif 'entrez' in column_lower or 'ncbi' in column_lower:
+                                    graph.add((row_node, NCBIGENE.id, Literal(value)))
+                                else:
+                                    graph.add((row_node, BIOLINK.symbol, Literal(value)))
+                                gene_added = True
+                    
+                    # Check for log fold change
+                    elif any(name in column_lower for name in possible_log_names):
+                        if not log_added:
+                            graph.add((row_node, EDAM.data_3754, Literal(value)))
+                            log_added = True
+                        else:
+                            predicate = URIRef(f"rdf:predicate/{column}")
+                            graph.add((row_node, predicate, Literal(value)))
+                    
+                    # Check for p-values
+                    elif any(name in column_lower for name in possible_pval_names):
+                        if not pval_added:
+                            graph.add((row_node, EDAM.data_2082, Literal(value)))
+                            pval_added = True
+                        else:
+                            predicate = URIRef(f"rdf:predicate/{column}")
+                            graph.add((row_node, predicate, Literal(value)))
+                    
+                    # Add any other columns as generic predicates
                     else:
-                        continue
-#                    else:
-#                        # For all other columns, use a generic predicate
-#                        predicate = URIRef(f"rdf:predicate/{column}")
-#                        graph.add((row_node, predicate, Literal(value)))
+                        predicate = URIRef(f"rdf:predicate/{column}")
+                        graph.add((row_node, predicate, Literal(value)))
+
 
 for dirpath, dirnames, filenames in os.walk(root_dir):
     for filename in filenames:

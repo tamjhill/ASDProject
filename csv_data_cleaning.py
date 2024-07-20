@@ -5,20 +5,10 @@ import re
 def process_csv_file(file_path):
     # Read the CSV file
     df = pd.read_csv(file_path)
-    
-    # Function to process column names
-    def process_column_name(col):
-        col = col.lower().replace(' ', '_')
-        if re.search(r'p[-_]?val(ue)?', col):
-            return 'pvalue'
-        elif re.search(r'(log[-_]?fold[-_]?(change|2)?|lf2?|fold[-_]?change)', col):
-            return 'logfold'
-        return col
-    
-    # Apply the processing function to column names
-    df.columns = [process_column_name(col) for col in df.columns]
     # Remove rows with multiple NAs or blanks
     df_cleaned = df.dropna(thresh=len(df.columns)//4)
+    # Process column names
+    df_cleaned.columns = df_cleaned.columns.map(lambda x: re.sub(r'[\s\-_]', '', x.lower()))
     # Save the processed dataframe back to CSV
     df_cleaned.to_csv(file_path, index=False, sep=",")
     print(f"Processed and overwritten: {file_path}")
