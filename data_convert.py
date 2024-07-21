@@ -1,10 +1,11 @@
-"""takes excel files retrieved from pubmed, checks if they contain a column re. log fold changes, and saves sheet as csv file"""
+"""takes excel, csv, tsv or txt files retrieved from pubmed, checks if they contain a column re. log fold changes, and saves sheet as csv file"""
 
 import pandas as pd
 import os
 from openpyxl import load_workbook
 import xlrd
 import csv
+import re
 
 def process_excel_file(file_path):
     # Load the Excel file
@@ -15,72 +16,78 @@ def process_excel_file(file_path):
     
     # Iterate through each sheet
     for sheet_name in wb.sheetnames:
+        #convert data to dataframe
         df = pd.read_excel(file_path, sheet_name=sheet_name)
+        process_dataframe(df, sheet_name, output_dir, file_path)
         
+
+def process_old_file(file_path):
+    wb = xlrd.open_workbook(file_path)
+    output_dir = os.path.dirname(file_path)
+    for sheet in wb.sheets():
+        print(f"Processing sheet: {sheet.name}")
+        # Get the headers
+        headers = [sheet.cell_value(0, col) for col in range(sheet.ncols)]
+        #convert data to dataframe
+        data = [
+            [sheet.cell_value(row, col) for col in range(sheet.ncols)]
+            for row in range(1, sheet.nrows)
+        ]
+        df = pd.DataFrame(data, columns=headers)
+        
+        process_dataframe(df, sheet.name, output_dir, file_path)
+
+
+def process_csv_file(file_path, delimiter=','):
+    df = pd.read_csv(file_path, delimiter=delimiter)
+    output_dir = os.path.dirname(file_path)
+    file_name = os.path.splitext(os.path.basename(file_path))[0]
+    process_dataframe(df, file_name, output_dir, file_path)
+
+
+def process_dataframe(df, sheet_name, output_dir, file_path):
         # Check if the sheet has a column with "log fold change" or similar
         log_fold_col = None
         for col in df.columns:
-            if any(phrase in col.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2', 'lf2', 'lfc']):
+            if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc']):
                 log_fold_col = col
                 break
         
         # If a matching column is found, save the sheet as CSV
         if log_fold_col:
-            newfile = sheet_name.replace(" ", "")
+            newfile = 'expdata_' + sheet_name.replace(" ", "")      #add prefix and remove any spaces for the new file name
             output_file = os.path.join(output_dir, f"{newfile}.csv")
             df.to_csv(output_file, index=False)
             print(f"Saved {sheet_name} as CSV: {output_file}")
         else:
             print(f"Skipped {sheet_name} in {file_path}: No 'log fold change' column found")
 
-def process_old_file(file_path):
-    # Load the xls file
-    wb = xlrd.open_workbook(file_path)
-    output_dir = os.path.dirname(file_path)
-    
-    # Iterate through each sheet
-    for sheet in wb.sheets():
-        print(f"Processing sheet: {sheet.name}")
-
-        # Get the headers
-        headers = [sheet.cell_value(0, col) for col in range(sheet.ncols)]
-
-        # Check if the sheet has a column with "log fold change" or similar
-        log_fold_col = None
-        for col, header in enumerate(headers):
-            if any(phrase in header.lower().replace('-', ' ') for phrase in ['log fold change', 'log fold', 'log fold2', 'lf', 'enrichment', 'logfc', 'fold change', 'fc', 'log2', 'lf2']):
-                log_fold_col = col
-                break
-
-        # If a matching column is found, save the sheet as CSV
-        if log_fold_col is not None:
-            newfile = sheet.name.replace(" ", "")
-            output_file = os.path.join(output_dir, f"{newfile}.csv")
-
-            with open(output_file, 'w', newline='') as csvfile:
-                writer = csv.writer(csvfile, delimiter=",")
-                writer.writerow(headers)  # Write headers
-
-                for row in range(1, sheet.nrows):  # Start from 1 to skip header
-                    row_data = [sheet.cell_value(row, col) for col in range(sheet.ncols)]
-                    writer.writerow(row_data)
-
-            print(f"Saved {sheet.name} as CSV: {output_file}")
-        else:
-            print(f"Skipped {sheet.name} in {file_path}: No 'log fold change' column found")
 
 def process_data_folder(data_folder):
     # Walk through all subdirectories
     for root, dirs, files in os.walk(data_folder):
         for file in files:
+            file_path = os.path.join(root, file)
+            print(f"Processing file: {file_path}")
             if file.endswith('.xlsx'):
-                file_path = os.path.join(root, file)
-                print(f"Processing file: {file_path}")
                 process_excel_file(file_path)
             elif file.endswith('.xls'):
-                file_path = os.path.join(root, file)
-                print(f"Processing file: {file_path}")
                 process_old_file(file_path)
+            elif file.endswith('.csv'):
+                process_csv_file(file_path)
+            elif file.endswith('.tsv'):
+                process_csv_file(file_path, delimiter='\t')
+            elif file.endswith('.txt'):
+                process_csv_file(file_path)
+                # Attempt to process as CSV, then TSV if that fails
+                try:
+                    process_csv_file(file_path)
+                except pd.errors.ParserError:
+                    try:
+                        process_csv_file(file_path, delimiter='\t')
+                    except pd.errors.ParserError:
+                        print(f"Unable to process {file_path}: Not a valid CSV or TSV file")
+
 
 data_folder = "data\\supp_data"
 process_data_folder(data_folder)
