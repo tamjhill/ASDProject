@@ -63,6 +63,7 @@ def get_gene_id(gene_name):
     genefile = 'gene_ids.txt'
     #print(f"Searching for gene: {gene_name}")
     with open(genefile, 'r') as file:
+        next(file)  #skip the header line
         for line in file:
             if gene_name.upper() in line.upper():
                 #print(f"{gene_name} HGNC ID found")
@@ -71,8 +72,7 @@ def get_gene_id(gene_name):
     return None
     
     
-def process_regular_csv(csv_file_path, counters):
-    matched_genes, unmatched_genes = counters
+def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
     filename = os.path.splitext(os.path.basename(csv_file_path))[0]
     pmid = os.path.basename(os.path.dirname(csv_file_path))
     
@@ -88,9 +88,6 @@ def process_regular_csv(csv_file_path, counters):
     possible_log_names = ['log2', 'lf2', 'lfc2', 'logfold2', 'log2fc', 'logfoldchange', 'logfold', 'lf', 'logfc', 'foldchange', 'fc', 'lfc', 'enrichment']
     possible_pval_names = ['padj', 'adjp', 'pvalueadj', 'adjpvalue', 'pvaladj', 'adjpval', 'pvadj', 'adjpv', 'pvalue', 'pval', 'pv']
     
-    matched_genes = 0
-    unmatched_genes = 0
-
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
@@ -107,7 +104,8 @@ def process_regular_csv(csv_file_path, counters):
                         #print("gene column match")
                         monarch_uri = get_gene_id(value)
                         if monarch_uri:
-                            graph.add((row_node, BIOLINK.Gene, MONARCH[monarch_uri]))
+                            full_monarch_uri = MONARCH[monarch_uri]
+                            graph.add((row_node, BIOLINK.Gene, full_monarch_uri))
                             gene_added = True
                             matched_genes += 1
                             #print(f"Added gene: {value} with HGNC ID: {monarch_uri}")
@@ -143,12 +141,13 @@ def process_regular_csv(csv_file_path, counters):
                     
                     # Add any other columns as generic predicates
                     else:
-                        predicate = URIRef(f"rdf:predicate/{column}")
-                        graph.add((row_node, predicate, Literal(value)))
+                        continue
+#                        predicate = URIRef(f"rdf:predicate/{column}")
+#                        graph.add((row_node, predicate, Literal(value)))
     return matched_genes, unmatched_genes
 
 # Root directory to search for CSV files
-root_dir = "C:\\Users\\tamjh\\CodeProjects\\ASDProject\\test_data"
+root_dir = "C:\\Users\\tamjh\\CodeProjects\\ASDProject\\data"
 matched_genes = 0
 unmatched_genes = 0 
 total_files_processed = 0
@@ -161,8 +160,8 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
             
             if filename == 'asd_article_metadata.csv':
                 process_metadata_csv(csv_file_path)
-            else:
-                matched_genes, unmatched_genes = process_regular_csv(csv_file_path, (matched_genes, unmatched_genes))
+            elif filename.startswith('expdata'):
+                matched_genes, unmatched_genes = process_regular_csv(csv_file_path, matched_genes, unmatched_genes)
             total_files_processed += 1
 
 print("\nProcessing complete. Summary:")
