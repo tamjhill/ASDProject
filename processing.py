@@ -84,7 +84,7 @@ def get_tables(url, pmid):
     soup = BeautifulSoup(html, "html.parser")
     for link in soup.find_all('a', href=True):
         href = link['href']
-        if any(href.lower().endswith(x) for x in ['.csv', '.xls', '.xlsx']):
+        if any(href.lower().endswith(x) for x in ['.csv', '.xls', '.xlsx', '.tsv', '.txt']):
             full_url = urljoin(url, href)
             filename = os.path.join(new_path, href.rsplit('/', 1)[-1])
             if os.path.isfile(filename):
