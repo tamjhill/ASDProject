@@ -156,11 +156,12 @@ for dirpath, dirnames, filenames in os.walk(root_dir):
     for filename in filenames:
         if filename.endswith('.csv'):
             csv_file_path = os.path.join(dirpath, filename)
-            print(f"Processing file: {csv_file_path}")
-            
+
             if filename == 'asd_article_metadata.csv':
+                print(f"Processing file: {csv_file_path}")
                 process_metadata_csv(csv_file_path)
             elif filename.startswith('expdata'):
+                print(f"Processing file: {csv_file_path}")
                 matched_genes, unmatched_genes = process_regular_csv(csv_file_path, matched_genes, unmatched_genes)
             total_files_processed += 1
 

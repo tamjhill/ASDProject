@@ -38,29 +38,51 @@ def process_old_file(file_path):
         process_dataframe(df, sheet.name, output_dir, file_path)
 
 
-def process_csv_file(file_path, delimiter=','):
-    df = pd.read_csv(file_path, delimiter=delimiter)
+def process_csv_file(file_path):
     output_dir = os.path.dirname(file_path)
     file_name = os.path.splitext(os.path.basename(file_path))[0]
-    process_dataframe(df, file_name, output_dir, file_path)
 
+    # Try reading with different settings
+    for encoding in ['utf-8', 'iso-8859-1', 'latin1']:
+        for delim in ['\t', ',', ';']:  # Changed order to prioritize tab
+            try:
+                df = pd.read_csv(file_path, delimiter=delim, encoding=encoding, on_bad_lines='warn')
+                if not df.empty:
+                    process_dataframe(df, file_name, output_dir, file_path, input_delimiter=delim)
+                    return
+            except Exception as e:
+                print(f"Failed to read {file_path} with delimiter '{delim}' and encoding '{encoding}': {str(e)}")
+    
+    # If all attempts fail, try reading as plain text
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+        print(f"File {file_path} couldn't be processed as CSV. Content preview:")
+        print(content[:100])  # Print first 100 characters
+    except Exception as e:
+        print(f"Failed to read {file_path} as text: {str(e)}")
 
-def process_dataframe(df, sheet_name, output_dir, file_path):
-        # Check if the sheet has a column with "log fold change" or similar
-        log_fold_col = None
-        for col in df.columns:
-            if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc']):
-                log_fold_col = col
-                break
-        
-        # If a matching column is found, save the sheet as CSV
-        if log_fold_col:
-            newfile = 'expdata_' + sheet_name.replace(" ", "")      #add prefix and remove any spaces for the new file name
-            output_file = os.path.join(output_dir, f"{newfile}.csv")
-            df.to_csv(output_file, index=False)
-            print(f"Saved {sheet_name} as CSV: {output_file}")
+def process_dataframe(df, sheet_name, output_dir, file_path, input_delimiter='\t'):
+    # Check if the sheet has a column with "log fold change" or similar
+    log_fold_col = None
+    for col in df.columns:
+        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc']):
+            log_fold_col = col
+            break
+    
+    # If a matching column is found, save the sheet as CSV
+    if log_fold_col:
+        newfile = 'expdata_' + sheet_name.replace(" ", "")  # add prefix and remove any spaces for the new file name
+        output_file = os.path.join(output_dir, f"{newfile}.csv")
+        if input_delimiter == '\t':
+            df.to_csv(output_file, index=False, sep=',')
         else:
-            print(f"Skipped {sheet_name} in {file_path}: No 'log fold change' column found")
+            df.to_csv(output_file, index=False)  # Use default comma separator
+        
+        print(f"Saved {sheet_name} as CSV: {output_file}")
+        
+    else:
+        print(f"Skipped {sheet_name} in {file_path}: No 'log fold change' column found")
 
 
 def process_data_folder(data_folder):
@@ -73,21 +95,9 @@ def process_data_folder(data_folder):
                 process_excel_file(file_path)
             elif file.endswith('.xls'):
                 process_old_file(file_path)
-            elif file.endswith('.csv'):
+            elif file.endswith(('.csv', '.tsv', '.txt')):
                 process_csv_file(file_path)
-            elif file.endswith('.tsv'):
-                process_csv_file(file_path, delimiter='\t')
-            elif file.endswith('.txt'):
-                process_csv_file(file_path)
-                # Attempt to process as CSV, then TSV if that fails
-                try:
-                    process_csv_file(file_path)
-                except pd.errors.ParserError:
-                    try:
-                        process_csv_file(file_path, delimiter='\t')
-                    except pd.errors.ParserError:
-                        print(f"Unable to process {file_path}: Not a valid CSV or TSV file")
 
 
-data_folder = "data\\supp_data"
+data_folder = "data\\supp_data\\"
 process_data_folder(data_folder)

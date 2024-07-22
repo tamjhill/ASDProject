@@ -7,8 +7,8 @@ import warnings
 def rename_ensembl_column(df):
     for column in df.columns:
         if df[column].dtype == 'object':  # Check if the column contains strings
-            ensembl_count = df[column].astype(str).str.match(r'^ENS', case=False).sum()
-            if ensembl_count > 1:
+            ensembl_count = df[column].iloc[1:].astype(str).str.match(r'^ENS(G|T)', case=False).sum()
+            if ensembl_count > 3:
                 df = df.rename(columns={column: 'ensembl'})
                 break
     return df
@@ -41,5 +41,5 @@ def process_data_folder(data_folder):
                 print(f"Processing file: {file_path}")
                 process_csv_file(file_path)
 
-data_folder = "data\supp_data"
+data_folder = "data\\supp_data"
 process_data_folder(data_folder)
