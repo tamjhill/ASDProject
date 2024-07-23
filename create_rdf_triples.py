@@ -172,3 +172,4 @@ print(f"Total unmatched genes: {unmatched_genes}")
 print(f"Total genes processed: {matched_genes + unmatched_genes}")
 graph.serialize(destination='main_graph.nt', format='nt', encoding= "utf-8" )
 print("Combined graph has been serialized to main_graph.nt")
+
