@@ -19,6 +19,6 @@ def process_nt_file(input_file, output_file):
             else:
                 outfile.write(line)
 
-input_file = 'subgraphtest.nt'
-output_file = 'cleanedgraph.nt'
+input_file = 'main_graph.nt'
+output_file = 'cleaned_maingraph.nt'
 process_nt_file(input_file, output_file)
