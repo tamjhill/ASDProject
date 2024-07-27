@@ -1,14 +1,29 @@
 import csv
 import rdflib
-from rdflib import Namespace, URIRef, Literal, BNode
+from rdflib import Namespace, URIRef, Literal
 import os
 from rdflib.namespace import XSD
 import requests
+import uuid
+import json
 
-# Create the graph object which holds the triples
+try:
+    with open('filename_uuid_map.json', 'r') as f:
+        filename_uuid_map = json.load(f)
+except FileNotFoundError:
+    filename_uuid_map = {}
+
+# store persistent UUIDs for filenames
+filename_uuid_map = {}
+
+def get_or_create_uuid(key):
+    if key not in filename_uuid_map:
+        filename_uuid_map[key] = str(uuid.uuid4())
+    return filename_uuid_map[key]
+
 graph = rdflib.Graph()
 
-# Define namespaces
+# Define namespaces and bind to prefixes
 BIOLINK = Namespace("https://w3id.org/biolink/vocab/")
 ENSEMBL = Namespace("http://identifiers.org/ensembl/")
 NCBIGENE = Namespace("http://identifiers.org/ncbigene/")
@@ -21,8 +36,8 @@ DCT = Namespace("http://purl.org/dc/terms/")
 PMC = Namespace("https://pubmed.ncbi.nlm.nih.gov/")
 OWL = Namespace("http://www.w3.org/2002/07/owl#")
 MONARCH = Namespace("https://monarchinitiative.org/")
+URN = Namespace("urn:uuid:")
 
-# Bind namespaces to prefixes
 graph.bind("biolink", BIOLINK)
 graph.bind("ensembl", ENSEMBL)
 graph.bind("ncbigene", NCBIGENE)
@@ -35,6 +50,7 @@ graph.bind("dct", DCT)
 graph.bind("pmc", PMC)
 graph.bind("owl", OWL)
 graph.bind("monarch", MONARCH)
+graph.bind("urn", URN)
 
 
 def process_metadata_csv(csv_file_path):
@@ -76,12 +92,11 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
     filename = os.path.splitext(os.path.basename(csv_file_path))[0]
     pmid = os.path.basename(os.path.dirname(csv_file_path))
     
-    dataset_uri = BNode()
+    dataset_uuid = get_or_create_uuid(filename)
+    dataset_uri = URN[dataset_uuid]
     pmid_uri = PMC[pmid]
     
-    graph.add((dataset_uri, RDF.type, BIOLINK.Dataset))
     graph.add((pmid_uri, EDAM.has_output, dataset_uri))
-    graph.add((dataset_uri, OWL.sameAs, Literal(filename)))
     graph.add((pmid_uri, RDF.type, DCT.identifier))
     
     possible_gene_names = ['ensembl', 'symbol', 'genesymbol', 'genename', 'geneid', 'entrez', 'ncbi']
@@ -91,37 +106,31 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            row_node = BNode()
-            graph.add((dataset_uri, EDAM.has_output, row_node))
-            graph.add((row_node, RDF.type, EDAM.data))
+            row_uuid = str(uuid.uuid4())
+            row_uri = URN[row_uuid]
+            graph.add((dataset_uri, EDAM.has_output, row_uri))
             
             gene_added = log_added = pval_added = False
             
             # Try to find and process gene information
-            for gene_column in possible_gene_names:
-                for column, value in row.items():
-                    if gene_column in column.lower() and value and not gene_added:
-                        #print("gene column match")
-                        monarch_uri = get_gene_id(value)
-                        if monarch_uri:
-                            full_monarch_uri = MONARCH[monarch_uri]
-                            graph.add((row_node, BIOLINK.Gene, full_monarch_uri))
-                            gene_added = True
-                            matched_genes += 1
-                            #print(f"Added gene: {value} with HGNC ID: {monarch_uri}")
-                            break
+            for column, value in row.items():
+                column_lower = column.lower()
+                if any(gene_name in column_lower for gene_name in possible_gene_names) and value and not gene_added:
+                    monarch_uri = get_gene_id(value)
+                    if monarch_uri:
+                        full_monarch_uri = MONARCH[monarch_uri]
+                        graph.add((row_uri, BIOLINK.Gene, full_monarch_uri))
+                        gene_added = True
+                        matched_genes += 1
+                    else:
+                        if 'ensembl' in column_lower:
+                            graph.add((row_uri, ENSEMBL.id, Literal(value)))
+                        elif 'entrez' in column_lower or 'ncbi' in column_lower:
+                            graph.add((row_uri, NCBIGENE.id, Literal(value)))
                         else:
-                            if 'ensembl' in column.lower():
-                                graph.add((row_node, ENSEMBL.id, Literal(value)))
-                            elif 'entrez' in column.lower() or 'ncbi' in column.lower():
-                                graph.add((row_node, NCBIGENE.id, Literal(value)))
-                            else:
-                                graph.add((row_node, BIOLINK.symbol, Literal(value)))
-                            gene_added = True
-                            unmatched_genes += 1
-                            #print(f"Added gene {value} without HGNC ID")
-                            break
-                if gene_added:
+                            graph.add((row_uri, BIOLINK.symbol, Literal(value)))
+                        gene_added = True
+                        unmatched_genes += 1
                     break
             
             # Then process the rest of the columns
@@ -131,19 +140,19 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
                     
                     # Check for log fold change
                     if any(name in column_lower for name in possible_log_names) and not log_added:
-                        graph.add((row_node, EDAM.data_3754, Literal(value)))
+                        graph.add((row_uri, EDAM.data_3754, Literal(value)))
                         log_added = True
                     
                     # Check for p-values
                     elif any(name in column_lower for name in possible_pval_names) and not pval_added:
-                        graph.add((row_node, EDAM.data_2082, Literal(value)))
+                        graph.add((row_uri, EDAM.data_2082, Literal(value)))
                         pval_added = True
                     
                     # Add any other columns as generic predicates
                     else:
                         continue
 #                        predicate = URIRef(f"rdf:predicate/{column}")
-#                        graph.add((row_node, predicate, Literal(value)))
+#                        graph.add((row_uri, predicate, Literal(value)))
     return matched_genes, unmatched_genes
 
 # Root directory to search for CSV files
@@ -172,4 +181,7 @@ print(f"Total unmatched genes: {unmatched_genes}")
 print(f"Total genes processed: {matched_genes + unmatched_genes}")
 graph.serialize(destination='main_graph.nt', format='nt', encoding= "utf-8" )
 print("Combined graph has been serialized to main_graph.nt")
+
+with open('filename_uuid_map.json', 'w') as f:
+    json.dump(filename_uuid_map, f)
 
