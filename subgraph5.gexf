@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2024-07-28">
+    <creator>NetworkX 3.2.1</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="0" title="relation" type="string" />
+    </attributes>
+    <nodes>
+      <node id="urn:uuid:f1de20a2-b5bc-4ea7-acbd-346204f101f4" label="urn:uuid:f1de20a2-b5bc-4ea7-acbd-346204f101f4" />
+      <node id="https://monarchinitiative.org/HGNC:1123" label="https://monarchinitiative.org/HGNC:1123" />
+      <node id="https://pubmed.ncbi.nlm.nih.gov/29134693" label="https://pubmed.ncbi.nlm.nih.gov/29134693" />
+      <node id="urn:uuid:fac76e1b-905b-4c7a-bc96-3e24eaa93911" label="urn:uuid:fac76e1b-905b-4c7a-bc96-3e24eaa93911" />
+      <node id="urn:uuid:0a7ce000-f857-47bf-b8d1-c1cc866c144d" label="urn:uuid:0a7ce000-f857-47bf-b8d1-c1cc866c144d" />
+      <node id="urn:uuid:868802b5-36c4-415d-97da-d470a595d5c1" label="urn:uuid:868802b5-36c4-415d-97da-d470a595d5c1" />
+      <node id="urn:uuid:ecea1bb7-4f12-4647-a0e5-c218c026f0b0" label="urn:uuid:ecea1bb7-4f12-4647-a0e5-c218c026f0b0" />
+      <node id="urn:uuid:a3643264-0a8e-4e99-ba20-e3bc14572c30" label="urn:uuid:a3643264-0a8e-4e99-ba20-e3bc14572c30" />
+      <node id="urn:uuid:9f4caf00-f10b-4397-9011-a03df696228c" label="urn:uuid:9f4caf00-f10b-4397-9011-a03df696228c" />
+      <node id="https://pubmed.ncbi.nlm.nih.gov/30545856" label="https://pubmed.ncbi.nlm.nih.gov/30545856" />
+      <node id="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" label="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" />
+      <node id="urn:uuid:6cf76a99-e33c-4daf-9099-c2e4e74d85bc" label="urn:uuid:6cf76a99-e33c-4daf-9099-c2e4e74d85bc" />
+      <node id="urn:uuid:f54620b3-d6f1-48d2-ae63-7ad98f6a4d3d" label="urn:uuid:f54620b3-d6f1-48d2-ae63-7ad98f6a4d3d" />
+      <node id="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" label="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" />
+      <node id="urn:uuid:0922b85c-e1d2-45bf-82cf-e7708e783512" label="urn:uuid:0922b85c-e1d2-45bf-82cf-e7708e783512" />
+      <node id="urn:uuid:f70ff698-7a49-4780-9524-c5d4003ee5e7" label="urn:uuid:f70ff698-7a49-4780-9524-c5d4003ee5e7" />
+      <node id="urn:uuid:247e293d-e2a7-4415-a784-23a2f9208922" label="urn:uuid:247e293d-e2a7-4415-a784-23a2f9208922" />
+      <node id="urn:uuid:23fba6bf-9f1f-4e0c-a05b-e0d297808fee" label="urn:uuid:23fba6bf-9f1f-4e0c-a05b-e0d297808fee" />
+      <node id="urn:uuid:46334342-156d-4648-8332-3505c1c6b1dc" label="urn:uuid:46334342-156d-4648-8332-3505c1c6b1dc" />
+      <node id="urn:uuid:6c9c9732-b1ba-4055-b975-56114357ad4a" label="urn:uuid:6c9c9732-b1ba-4055-b975-56114357ad4a" />
+      <node id="https://pubmed.ncbi.nlm.nih.gov/28485729" label="https://pubmed.ncbi.nlm.nih.gov/28485729" />
+      <node id="urn:uuid:edee5222-53c4-43f5-9579-2500a6e982c0" label="urn:uuid:edee5222-53c4-43f5-9579-2500a6e982c0" />
+      <node id="urn:uuid:52273007-22f2-4476-b8ad-80385e565211" label="urn:uuid:52273007-22f2-4476-b8ad-80385e565211" />
+      <node id="urn:uuid:31e73a4a-4783-4e26-9723-faaa9ee5a404" label="urn:uuid:31e73a4a-4783-4e26-9723-faaa9ee5a404" />
+      <node id="urn:uuid:bbf699f2-eda7-48b5-9313-557dd42d7981" label="urn:uuid:bbf699f2-eda7-48b5-9313-557dd42d7981" />
+      <node id="urn:uuid:21905c6b-1cc2-4afd-bf6c-8c70014a30c7" label="urn:uuid:21905c6b-1cc2-4afd-bf6c-8c70014a30c7" />
+      <node id="https://pubmed.ncbi.nlm.nih.gov/37041460" label="https://pubmed.ncbi.nlm.nih.gov/37041460" />
+      <node id="urn:uuid:16b7a8f0-737a-46d1-a5c2-f93ede22499d" label="urn:uuid:16b7a8f0-737a-46d1-a5c2-f93ede22499d" />
+      <node id="urn:uuid:2395467c-e8e2-41e2-8eae-962b2a4e2ddc" label="urn:uuid:2395467c-e8e2-41e2-8eae-962b2a4e2ddc" />
+      <node id="https://pubmed.ncbi.nlm.nih.gov/36323788" label="https://pubmed.ncbi.nlm.nih.gov/36323788" />
+    </nodes>
+    <edges>
+      <edge source="urn:uuid:f1de20a2-b5bc-4ea7-acbd-346204f101f4" target="https://monarchinitiative.org/HGNC:1123" id="0">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/29134693" target="urn:uuid:fac76e1b-905b-4c7a-bc96-3e24eaa93911" id="1">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:fac76e1b-905b-4c7a-bc96-3e24eaa93911" target="urn:uuid:f1de20a2-b5bc-4ea7-acbd-346204f101f4" id="2">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:0a7ce000-f857-47bf-b8d1-c1cc866c144d" target="https://monarchinitiative.org/HGNC:1123" id="3">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:868802b5-36c4-415d-97da-d470a595d5c1" target="urn:uuid:ecea1bb7-4f12-4647-a0e5-c218c026f0b0" id="4">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:ecea1bb7-4f12-4647-a0e5-c218c026f0b0" target="https://monarchinitiative.org/HGNC:1123" id="5">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:a3643264-0a8e-4e99-ba20-e3bc14572c30" target="https://monarchinitiative.org/HGNC:1123" id="6">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:9f4caf00-f10b-4397-9011-a03df696228c" target="https://monarchinitiative.org/HGNC:1123" id="7">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/30545856" target="urn:uuid:868802b5-36c4-415d-97da-d470a595d5c1" id="8">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/30545856" target="urn:uuid:f70ff698-7a49-4780-9524-c5d4003ee5e7" id="9">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/30545856" target="urn:uuid:6c9c9732-b1ba-4055-b975-56114357ad4a" id="10">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/30545856" target="urn:uuid:247e293d-e2a7-4415-a784-23a2f9208922" id="11">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" target="urn:uuid:6cf76a99-e33c-4daf-9099-c2e4e74d85bc" id="12">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" target="urn:uuid:0a7ce000-f857-47bf-b8d1-c1cc866c144d" id="13">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" target="urn:uuid:a3643264-0a8e-4e99-ba20-e3bc14572c30" id="14">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" target="urn:uuid:21905c6b-1cc2-4afd-bf6c-8c70014a30c7" id="15">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:6cf76a99-e33c-4daf-9099-c2e4e74d85bc" target="https://monarchinitiative.org/HGNC:1123" id="16">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:f54620b3-d6f1-48d2-ae63-7ad98f6a4d3d" target="https://monarchinitiative.org/HGNC:1123" id="17">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" target="urn:uuid:0922b85c-e1d2-45bf-82cf-e7708e783512" id="18">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" target="urn:uuid:16b7a8f0-737a-46d1-a5c2-f93ede22499d" id="19">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" target="urn:uuid:23fba6bf-9f1f-4e0c-a05b-e0d297808fee" id="20">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" target="urn:uuid:46334342-156d-4648-8332-3505c1c6b1dc" id="21">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:0922b85c-e1d2-45bf-82cf-e7708e783512" target="https://monarchinitiative.org/HGNC:1123" id="22">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:f70ff698-7a49-4780-9524-c5d4003ee5e7" target="urn:uuid:52273007-22f2-4476-b8ad-80385e565211" id="23">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:247e293d-e2a7-4415-a784-23a2f9208922" target="urn:uuid:f54620b3-d6f1-48d2-ae63-7ad98f6a4d3d" id="24">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:23fba6bf-9f1f-4e0c-a05b-e0d297808fee" target="https://monarchinitiative.org/HGNC:1123" id="25">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:46334342-156d-4648-8332-3505c1c6b1dc" target="https://monarchinitiative.org/HGNC:1123" id="26">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:6c9c9732-b1ba-4055-b975-56114357ad4a" target="urn:uuid:31e73a4a-4783-4e26-9723-faaa9ee5a404" id="27">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/28485729" target="urn:uuid:edee5222-53c4-43f5-9579-2500a6e982c0" id="28">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:edee5222-53c4-43f5-9579-2500a6e982c0" target="urn:uuid:bbf699f2-eda7-48b5-9313-557dd42d7981" id="29">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:52273007-22f2-4476-b8ad-80385e565211" target="https://monarchinitiative.org/HGNC:1123" id="30">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:31e73a4a-4783-4e26-9723-faaa9ee5a404" target="https://monarchinitiative.org/HGNC:1123" id="31">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:bbf699f2-eda7-48b5-9313-557dd42d7981" target="https://monarchinitiative.org/HGNC:1123" id="32">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:21905c6b-1cc2-4afd-bf6c-8c70014a30c7" target="https://monarchinitiative.org/HGNC:1123" id="33">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/37041460" target="urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c" id="34">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/37041460" target="urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23" id="35">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:16b7a8f0-737a-46d1-a5c2-f93ede22499d" target="https://monarchinitiative.org/HGNC:1123" id="36">
+        <attvalues>
+          <attvalue for="0" value="https://w3id.org/biolink/vocab/Gene" />
+        </attvalues>
+      </edge>
+      <edge source="urn:uuid:2395467c-e8e2-41e2-8eae-962b2a4e2ddc" target="urn:uuid:9f4caf00-f10b-4397-9011-a03df696228c" id="37">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+      <edge source="https://pubmed.ncbi.nlm.nih.gov/36323788" target="urn:uuid:2395467c-e8e2-41e2-8eae-962b2a4e2ddc" id="38">
+        <attvalues>
+          <attvalue for="0" value="http://edamontology.org/has_output" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

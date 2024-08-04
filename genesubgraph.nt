@@ -1,0 +1,44 @@
+<urn:uuid:f1de20a2-b5bc-4ea7-acbd-346204f101f4> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:31e73a4a-4783-4e26-9723-faaa9ee5a404> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:f54620b3-d6f1-48d2-ae63-7ad98f6a4d3d> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:bbf699f2-eda7-48b5-9313-557dd42d7981> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:9f4caf00-f10b-4397-9011-a03df696228c> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:46334342-156d-4648-8332-3505c1c6b1dc> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:0922b85c-e1d2-45bf-82cf-e7708e783512> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:a3643264-0a8e-4e99-ba20-e3bc14572c30> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:52273007-22f2-4476-b8ad-80385e565211> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:0a7ce000-f857-47bf-b8d1-c1cc866c144d> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:ecea1bb7-4f12-4647-a0e5-c218c026f0b0> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:21905c6b-1cc2-4afd-bf6c-8c70014a30c7> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:6cf76a99-e33c-4daf-9099-c2e4e74d85bc> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:23fba6bf-9f1f-4e0c-a05b-e0d297808fee> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:16b7a8f0-737a-46d1-a5c2-f93ede22499d> <https://w3id.org/biolink/vocab/Gene> <https://monarchinitiative.org/HGNC:1123> .
+<urn:uuid:fac76e1b-905b-4c7a-bc96-3e24eaa93911> <http://edamontology.org/has_output> <urn:uuid:f1de20a2-b5bc-4ea7-acbd-346204f101f4> .
+<urn:uuid:6c9c9732-b1ba-4055-b975-56114357ad4a> <http://edamontology.org/has_output> <urn:uuid:31e73a4a-4783-4e26-9723-faaa9ee5a404> .
+<urn:uuid:247e293d-e2a7-4415-a784-23a2f9208922> <http://edamontology.org/has_output> <urn:uuid:f54620b3-d6f1-48d2-ae63-7ad98f6a4d3d> .
+<urn:uuid:edee5222-53c4-43f5-9579-2500a6e982c0> <http://edamontology.org/has_output> <urn:uuid:bbf699f2-eda7-48b5-9313-557dd42d7981> .
+<urn:uuid:2395467c-e8e2-41e2-8eae-962b2a4e2ddc> <http://edamontology.org/has_output> <urn:uuid:9f4caf00-f10b-4397-9011-a03df696228c> .
+<urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23> <http://edamontology.org/has_output> <urn:uuid:46334342-156d-4648-8332-3505c1c6b1dc> .
+<urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23> <http://edamontology.org/has_output> <urn:uuid:0922b85c-e1d2-45bf-82cf-e7708e783512> .
+<urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c> <http://edamontology.org/has_output> <urn:uuid:a3643264-0a8e-4e99-ba20-e3bc14572c30> .
+<urn:uuid:f70ff698-7a49-4780-9524-c5d4003ee5e7> <http://edamontology.org/has_output> <urn:uuid:52273007-22f2-4476-b8ad-80385e565211> .
+<urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c> <http://edamontology.org/has_output> <urn:uuid:0a7ce000-f857-47bf-b8d1-c1cc866c144d> .
+<urn:uuid:868802b5-36c4-415d-97da-d470a595d5c1> <http://edamontology.org/has_output> <urn:uuid:ecea1bb7-4f12-4647-a0e5-c218c026f0b0> .
+<urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c> <http://edamontology.org/has_output> <urn:uuid:21905c6b-1cc2-4afd-bf6c-8c70014a30c7> . 
+<urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c> <http://edamontology.org/has_output> <urn:uuid:6cf76a99-e33c-4daf-9099-c2e4e74d85bc> .
+<urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23> <http://edamontology.org/has_output> <urn:uuid:23fba6bf-9f1f-4e0c-a05b-e0d297808fee> .
+<urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23> <http://edamontology.org/has_output> <urn:uuid:16b7a8f0-737a-46d1-a5c2-f93ede22499d> .
+<https://pubmed.ncbi.nlm.nih.gov/29134693> <http://edamontology.org/has_output> <urn:uuid:fac76e1b-905b-4c7a-bc96-3e24eaa93911> .
+<https://pubmed.ncbi.nlm.nih.gov/30545856> <http://edamontology.org/has_output> <urn:uuid:6c9c9732-b1ba-4055-b975-56114357ad4a> .
+<https://pubmed.ncbi.nlm.nih.gov/30545856> <http://edamontology.org/has_output> <urn:uuid:f70ff698-7a49-4780-9524-c5d4003ee5e7> .
+<https://pubmed.ncbi.nlm.nih.gov/30545856> <http://edamontology.org/has_output> <urn:uuid:247e293d-e2a7-4415-a784-23a2f9208922> .
+<https://pubmed.ncbi.nlm.nih.gov/30545856> <http://edamontology.org/has_output> <urn:uuid:868802b5-36c4-415d-97da-d470a595d5c1> .
+<https://pubmed.ncbi.nlm.nih.gov/36323788> <http://edamontology.org/has_output> <urn:uuid:2395467c-e8e2-41e2-8eae-962b2a4e2ddc> .
+<https://pubmed.ncbi.nlm.nih.gov/28485729> <http://edamontology.org/has_output> <urn:uuid:edee5222-53c4-43f5-9579-2500a6e982c0> .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://edamontology.org/has_output> <urn:uuid:5621b28b-e185-4fbf-ab85-1217f2f1c53c> .
+<https://pubmed.ncbi.nlm.nih.gov/37041460> <http://edamontology.org/has_output> <urn:uuid:c294bd47-9ee8-4ef5-975d-27c239c0cf23> .
+
+
+
+
+
