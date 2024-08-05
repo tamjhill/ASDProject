@@ -66,7 +66,7 @@ def process_dataframe(df, sheet_name, output_dir, file_path, input_delimiter='\t
     # Check if the sheet has a column with "log fold change" or similar
     log_fold_col = None
     for col in df.columns:
-        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc']):
+        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'expression', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc']):
             log_fold_col = col
             break
     

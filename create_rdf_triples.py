@@ -99,9 +99,9 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
     graph.add((pmid_uri, EDAM.has_output, dataset_uri))
     graph.add((pmid_uri, RDF.type, DCT.identifier))
     
-    possible_gene_names = ['ensembl', 'symbol', 'genesymbol', 'genename', 'geneid', 'entrez', 'ncbi']
-    possible_log_names = ['log2', 'lf2', 'lfc2', 'logfold2', 'log2fc', 'logfoldchange', 'logfold', 'lf', 'logfc', 'foldchange', 'fc', 'lfc', 'enrichment']
-    possible_pval_names = ['padj', 'adjp', 'pvalueadj', 'adjpvalue', 'pvaladj', 'adjpval', 'pvadj', 'adjpv', 'pvalue', 'pval', 'pv']
+    possible_gene_names = ['symbol', 'genesymbol', 'genename', 'ensembl', 'geneid', 'entrez', 'ncbi']
+    possible_log_names = ['log2', 'lf2', 'lfc2', 'logfold2', 'log2fc', 'logfoldchange', 'logfold', 'lf', 'logfc', 'foldchange', 'fc', 'lfc', 'expression', 'enrichment']
+    possible_pval_names = ['padj', 'adjp', 'pvalueadj', 'adjpvalue', 'pvaladj', 'adjpval', 'pvadj', 'adjpv', 'fdr', 'pvalue', 'pval', 'pv']
     
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)
