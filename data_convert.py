@@ -64,15 +64,27 @@ def process_csv_file(file_path):
 
 def process_dataframe(df, sheet_name, output_dir, file_path, input_delimiter='\t'):
     # Check if the sheet has a column with "log fold change" or similar
+    df.columns = df.columns.astype(str)
     log_fold_col = None
     for col in df.columns:
-        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'expression', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc']):
+        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'expression', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc', 'log', 'fold']):
             log_fold_col = col
             break
     
     # If a matching column is found, save the sheet as CSV
     if log_fold_col:
-        newfile = 'expdata_' + sheet_name.replace(" ", "")  # add prefix and remove any spaces for the new file name
+        replacement_chars  = {" " : "",
+                              "<" : "lessthan",
+                              ">" : "morethan",
+                              "." : "",
+                              ":" : "",
+                              "/" : "",
+                              "?" : "",
+                              "*" : "",
+                              "&" : "" }
+        for old, new in replacement_chars.items():
+            sheet_name = sheet_name.replace(old, new)
+        newfile = 'expdata_' + sheet_name
         output_file = os.path.join(output_dir, f"{newfile}.csv")
         if input_delimiter == '\t':
             df.to_csv(output_file, index=False, sep=',')
