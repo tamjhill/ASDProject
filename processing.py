@@ -1,4 +1,4 @@
-#This file searches rthe Entrez database for relevant papers, retreives their DOIs metadata, obtains a pdf 
+#This file searches the Entrez database for relevant papers, retreives their DOIs metadata, obtains a pdf 
 # of the original paper, and all supporting data xlsx files
 
 # importing libraries
@@ -24,7 +24,7 @@ def get_search_result():
         print("Invalid email format. Try again.")
         Entrez.email = input("Enter email address for NCBI Entrez: ")
     handle = Entrez.esearch(db='pubmed',
-                            term='((autism[title] or ASD[title] AND brain AND transcriptomic AND expression AND rna AND sequencing NOT Review[Publication Type]))',
+                            term='((autism[title] or ASD[title]) AND brain AND transcriptomic AND expression AND rna NOT review[title] NOT Review[Publication Type])',
                             retmax='30',
                             sort='relevance',
                             retmode='xml')
@@ -41,17 +41,17 @@ def get_pmids(search_res):
 # for each PMID, convert to DOI and add to new list
 def get_dois(plist):
     doi_list = []
+    valid_pmids = []
     for i in plist:
         try:
             doi_number = pmid2doi(i)
-            if doi_number is None:
-                continue
-            else:
+            if doi_number is not None:
                 doi_list.append(doi_number)
+                valid_pmids.append(i)
         except TypeError:
             continue
-    print(len(doi_list))
-    return doi_list
+    print(f"Found {len(doi_list)} DOIs out of {len(plist)} PMIDs")
+    return valid_pmids, doi_list
 
 # convert each doi to a url
 def get_urls(plist):
@@ -60,7 +60,7 @@ def get_urls(plist):
         prefix = 'https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/'
         new_url = prefix + plist[p]
         url_list.append(new_url)
-    print(url_list)
+    #print(url_list)
     return url_list
 
 # retrieve supplementary files from the article
@@ -210,15 +210,15 @@ def get_metadata(plist, dlist):
 def main():
     search_data = get_search_result()
     pmid_data = get_pmids(search_data)
-    doi_data = get_dois(pmid_data)
-    get_metadata(pmid_data, doi_data)
-    url_data = get_urls(pmid_data)
+    valid_pmids, doi_data = get_dois(pmid_data)
+    get_metadata(valid_pmids, doi_data)
+    url_data = get_urls(valid_pmids)
     for u in url_data:
         try:
             get_pdfs(u)
         except urllib.error.HTTPError:
             pass
-    for u, p in zip(url_data, pmid_data):
+    for u, p in zip(url_data, valid_pmids):
         try:
             get_tables(u, p)
         except urllib.error.HTTPError:
