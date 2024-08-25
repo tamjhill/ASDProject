@@ -10,13 +10,17 @@ Outline of the project and code:
     - dataconvert.py
    
 4. data cleaning
-    - csv_data_cleaning.py (needs more)
+    - csv_data_cleaning.py 
 
 5. mapping to rdf triples
-    - create_rdf_test.py
+    - create_rdf_triples.py
+    - graph_cleanup.py
 
-6. data testing and analysis
+6. data testing and analysis (see analysis directory)
+    - general_tests.ipynb
+    - pca_analysis.ipynb
     - usecase1.ipynb
     - usecase2.ipynb
     - usecase2.ipynb
-    (more testing needed)
+
+Article outputs are stored in data, the rdf graph is stored in cleaned_maingraph.nt .
