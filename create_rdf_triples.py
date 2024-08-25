@@ -76,6 +76,8 @@ def process_metadata_csv(csv_file_path):
 
 
 def get_gene_id(gene_name):
+    if '.' in gene_name:
+        gene_name = gene_name.split('.')[0]
     genefile = 'gene_ids.txt'
     #print(f"Searching for gene: {gene_name}")
     with open(genefile, 'r') as file:
@@ -99,9 +101,9 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
     graph.add((pmid_uri, EDAM.has_output, dataset_uri))
     graph.add((pmid_uri, RDF.type, DCT.identifier))
     
-    possible_gene_names = ['symbol', 'genesymbol', 'genename', 'ensembl', 'geneid', 'entrez', 'ncbi']
-    possible_log_names = ['log2', 'lf2', 'lfc2', 'logfold2', 'log2fc', 'logfoldchange', 'logfold', 'lf', 'logfc', 'foldchange', 'fc', 'lfc', 'expression', 'enrichment']
-    possible_pval_names = ['padj', 'adjp', 'pvalueadj', 'adjpvalue', 'pvaladj', 'adjpval', 'pvadj', 'adjpv', 'fdr', 'pvalue', 'pval', 'pv']
+    possible_gene_names = ['ensembl', 'geneid', 'symbol', 'genesymbol', 'genename', 'entrez', 'ncbi', 'gene', 'tf', 'rna', 'feature']
+    possible_log_names = ['log2', 'lf2', 'lfc2', 'logfold2', 'log2fc', 'logfoldchange', 'logfold', 'lf', 'logfc', 'foldchange', 'fc', 'lfc', 'fold', 'expression', 'enrichment', 'estimate']
+    possible_pval_names = ['padj', 'adjp', 'pvalueadj', 'adjpvalue', 'pvaladj', 'adjpval', 'pvadj', 'adjpv', 'fdr', 'fdrpval', 'qvalue', 'pvalue', 'qval', 'pval', 'pv', 'qv']
     
     with open(csv_file_path, 'r') as csvfile:
         reader = csv.DictReader(csvfile)

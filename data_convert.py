@@ -86,6 +86,11 @@ def process_dataframe(df, sheet_name, output_dir, file_path, input_delimiter='\t
             sheet_name = sheet_name.replace(old, new)
         newfile = 'expdata_' + sheet_name
         output_file = os.path.join(output_dir, f"{newfile}.csv")
+
+        if os.path.exists(output_file):
+            original_filename = os.path.splitext(os.path.basename(file_path))[0]
+            output_file = os.path.join(output_dir, f"{newfile}_{original_filename}.csv")
+
         if input_delimiter == '\t':
             df.to_csv(output_file, index=False, sep=',')
         else:
@@ -103,11 +108,11 @@ def process_data_folder(data_folder):
         for file in files:
             file_path = os.path.join(root, file)
             print(f"Processing file: {file_path}")
-            if file.endswith('.xlsx'):
+            if file.lower().endswith('.xlsx'):
                 process_excel_file(file_path)
-            elif file.endswith('.xls'):
+            elif file.lower().endswith('.xls'):
                 process_old_file(file_path)
-            elif file.endswith(('.csv', '.tsv', '.txt')):
+            elif file.lower().endswith(('.csv', '.tsv', '.txt')):
                 process_csv_file(file_path)
 
 
