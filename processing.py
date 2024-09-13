@@ -17,8 +17,8 @@ from selenium import webdriver
 from urllib.parse import urljoin
 
 
-# Article search, returning PMIDs for articles with search terms taken from related article titles.
 def get_search_result():
+    """Article search, returning PMIDs for articles matching terms relating to Autism and gene expression"""
     Entrez.email = input("Enter email address for NCBI Entrez: ")
     while '@' not in Entrez.email or '.' not in Entrez.email:
         print("Invalid email format. Try again.")
@@ -32,14 +32,15 @@ def get_search_result():
     return search_results
 
 
-def get_pmids(search_res):
-    # store as list of the PMIDs
+def get_pmids(search_res) -> list[int]:
+    """Stores a list of retrieved PMIDs"""
     initial_list = search_res["IdList"]
     print(len(initial_list))
     return initial_list
 
-# for each PMID, convert to DOI and add to new list
-def get_dois(plist):
+
+def get_dois(plist: list[int]) -> tuple[list[int], list[str]]:
+    """Converts each PMID to a DOI, returns valid PMIDs and new DOIs as separate lists"""
     doi_list = []
     valid_pmids = []
     for i in plist:
@@ -53,8 +54,9 @@ def get_dois(plist):
     print(f"Found {len(doi_list)} DOIs out of {len(plist)} PMIDs")
     return valid_pmids, doi_list
 
-# convert each doi to a url
-def get_urls(plist):
+
+def get_urls(plist: list[int])-> list[str]:
+    """converts each DOI to a valid URL"""
     url_list = []
     for p in range(len(plist)):
         prefix = 'https://www.ncbi.nlm.nih.gov/pmc/articles/pmid/'
@@ -63,13 +65,14 @@ def get_urls(plist):
     #print(url_list)
     return url_list
 
-# retrieve supplementary files from the article
-def get_tables(url, pmid):
+
+def get_tables(url, pmid) -> None:
+    """retrieves supplementary files from the article"""
     main_dir = 'data'
     supp_output_dir = 'supp_data'
     new_dir = pmid
     new_path = os.path.join(main_dir, supp_output_dir, new_dir)
-    # create the directory if it doesn't exist
+    # creates the directory if it doesn't exist
     os.makedirs(new_path, exist_ok=True)
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
     
@@ -102,11 +105,11 @@ def get_tables(url, pmid):
     return
 
 def get_pdfs(url):
+    """retrieves associated pdf of the full article"""
     main_dir = 'data'
     art_output_dir = 'article_data'
     output_path = os.path.join(main_dir, art_output_dir)
     
-    # Create the directory if it doesn't exist
     os.makedirs(output_path, exist_ok=True)
 
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
@@ -133,9 +136,7 @@ def get_pdfs(url):
             print("No article PDF link found on the page.")
             return None
 
-    # Ensure we have a full URL
     pdf_url = urljoin(url, pdf_url)
-    # Extract filename
     filename_part = pdf_url.split('=')[-1] if '=' in pdf_url else pdf_url.split('/')[-1]
     if not filename_part.lower().endswith('.pdf'):
         filename_part += '.pdf'
@@ -157,7 +158,7 @@ def get_pdfs(url):
         print(f"Error downloading PDF: {e}")
         return None
 
-def get_metadata(plist, dlist):
+def get_metadata(plist: list[int], dlist: list[str]):
     fetch = PubMedFetcher()
     articles = {}
     for pmid in plist:
@@ -168,11 +169,6 @@ def get_metadata(plist, dlist):
     for pmid in plist:
         titles[pmid] = fetch.article_by_pmid(pmid).title
     Title = pd.DataFrame(list(titles.items()), columns=['pmid', 'title'])
-
-#    authors = {}
-#    for pmid in plist:
-#        authors[pmid] = fetch.article_by_pmid(pmid).author_name
-#    Author = pd.DataFrame(list(authors.items()), columns=['pmid', 'author_name'])
 
     dates = {}
     for pmid in plist:
@@ -226,7 +222,7 @@ def main():
     print("All articles and data retrived")
     return 
 
-#add a function to be used to pull only new data
+#future additions - add a function to be used to pull only new data
 
 if __name__ == "__main__":
     main()
