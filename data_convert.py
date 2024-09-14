@@ -8,27 +8,24 @@ import csv
 import re
 
 def process_excel_file(file_path):
-    # Load the Excel file
+    """loads excel files into dataframes
+    """
     wb = load_workbook(filename=file_path, read_only=True)
-    
-    # Get the directory of the input file
     output_dir = os.path.dirname(file_path)
     
-    # Iterate through each sheet
     for sheet_name in wb.sheetnames:
-        #convert data to dataframe
         df = pd.read_excel(file_path, sheet_name=sheet_name)
         process_dataframe(df, sheet_name, output_dir, file_path)
         
 
 def process_old_file(file_path):
+    """loads older-style excel files (.xls) into dataframes
+    """
     wb = xlrd.open_workbook(file_path)
     output_dir = os.path.dirname(file_path)
     for sheet in wb.sheets():
         print(f"Processing sheet: {sheet.name}")
-        # Get the headers
         headers = [sheet.cell_value(0, col) for col in range(sheet.ncols)]
-        #convert data to dataframe
         data = [
             [sheet.cell_value(row, col) for col in range(sheet.ncols)]
             for row in range(1, sheet.nrows)
@@ -39,12 +36,13 @@ def process_old_file(file_path):
 
 
 def process_csv_file(file_path):
+    """loads csv, tsc or txt friles into dataframes
+    """
     output_dir = os.path.dirname(file_path)
     file_name = os.path.splitext(os.path.basename(file_path))[0]
-
     # Try reading with different settings
     for encoding in ['utf-8', 'iso-8859-1', 'latin1']:
-        for delim in ['\t', ',', ';']:  # Changed order to prioritize tab
+        for delim in ['\t', ',', ';']:  # prioritize tab
             try:
                 df = pd.read_csv(file_path, delimiter=delim, encoding=encoding, on_bad_lines='warn')
                 if not df.empty:
@@ -62,17 +60,23 @@ def process_csv_file(file_path):
     except Exception as e:
         print(f"Failed to read {file_path} as text: {str(e)}")
 
+
 def process_dataframe(df, sheet_name, output_dir, file_path, input_delimiter='\t'):
-    # Check if the sheet has a column with "log fold change" or similar
+    """processes dataframes to assess if the data relates to gene expression - looks for "log fold change" or similar
+    in column titles
+    """
     df.columns = df.columns.astype(str)
     log_fold_col = None
     for col in df.columns:
-        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 'expression', 'enrichment', 'logfc', 'foldchange', 'fc', 'log2', 'lf2', 'lfc', 'log2fc', 'log', 'fold']):
+        if any(phrase in re.sub(r'[_\s-]', '', col.lower()) for phrase in ['logfoldchange', 'logfold', 'logfold2', 'lf', 
+                                                                           'expression', 'enrichment', 'logfc', 'foldchange', 'fc', 
+                                                                           'log2', 'lf2', 'lfc', 'log2fc', 'log', 'fold']):
             log_fold_col = col
             break
     
-    # If a matching column is found, save the sheet as CSV
+    # If matching column is found, save sheet as CSV
     if log_fold_col:
+        # remove characters not appropriate for filenames
         replacement_chars  = {" " : "",
                               "<" : "lessthan",
                               ">" : "morethan",
@@ -94,16 +98,15 @@ def process_dataframe(df, sheet_name, output_dir, file_path, input_delimiter='\t
         if input_delimiter == '\t':
             df.to_csv(output_file, index=False, sep=',')
         else:
-            df.to_csv(output_file, index=False)  # Use default comma separator
-        
+            df.to_csv(output_file, index=False)
         print(f"Saved {sheet_name} as CSV: {output_file}")
-        
     else:
         print(f"Skipped {sheet_name} in {file_path}: No 'log fold change' column found")
 
 
 def process_data_folder(data_folder):
-    # Walk through all subdirectories
+    """ Walks through all subdirectories, processes files found according to their extension
+    """
     for root, dirs, files in os.walk(data_folder):
         for file in files:
             file_path = os.path.join(root, file)
