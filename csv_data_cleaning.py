@@ -5,6 +5,8 @@ import warnings
 
 
 def rename_ensembl_column(df):
+    """finds a column with clear ensembl data and renames the column title
+    """
     for column in df.columns:
         if df[column].dtype == 'object':  # Check if the column contains strings
             ensembl_count = df[column].iloc[1:].astype(str).str.match(r'^ENS(G|T)', case=False).sum()
@@ -15,6 +17,9 @@ def rename_ensembl_column(df):
 
 
 def process_csv_file(file_path):
+    """Data cleaning for the saved expression info csv files.
+    removes rows with multiple blank cells, and removes spaces and characters from column headers.
+    """
     try:
         with warnings.catch_warnings():
             warnings.simplefilter("error", pd.errors.DtypeWarning)
