@@ -164,7 +164,7 @@ def process_regular_csv(csv_file_path, matched_genes, unmatched_genes):
                     
                     # Check for p-values
                     elif any(name in column_lower for name in possible_pval_names) and not pval_added:
-                        graph.add((row_uri, EDAM.data_2082, Literal(value)))
+                        graph.add((row_uri, EDAM.data_1669, Literal(value)))
                         pval_added = True
                     
                     # Add any other columns as generic predicates - removed for now to reduce graph size but can be readded for future use
