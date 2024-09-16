@@ -1,7 +1,7 @@
 Outline of the project and code:
 
 1. finding relevant articles
-    - See processing.py
+    - processing.py
 
 2. retrieving article metadata, abstracts and supporting files
     - processing.py
@@ -18,9 +18,9 @@ Outline of the project and code:
 
 6. data testing and analysis (see analysis directory)
     - general_tests.ipynb
-    - pca_analysis.ipynb
+    - graphanalysis.ipynb
     - usecase1.ipynb
     - usecase2.ipynb
     - usecase2.ipynb
 
-Article outputs are stored in data, the rdf graph is stored in cleaned_maingraph.nt .
+Retrieved article outputs are stored in the 'data' directory, the rdf graph is stored in 'cleaned_maingraph.nt' .
